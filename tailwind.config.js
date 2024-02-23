@@ -10,7 +10,9 @@ export default {
       colors:{
         blackLogin: '#111828',
         blueLogin: '#1C65F2',
-        grayInput: '#323A4A'
+        grayInput: '#323A4A',
+        blackRecovery: '#1E2A36',
+        blueRecoveryPassword: '#1D65EE'
       }
     },
     

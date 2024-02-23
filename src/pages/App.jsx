@@ -1,7 +1,5 @@
-
-//import Login from './Auth/Login';
-import Registro from "./Auth/Registro"
-
+import React from 'react';
+import Login from './Auth/Login';
 
 export default function App() {
   return (
@@ -11,7 +9,6 @@ export default function App() {
     </div>
 
   )
-
 }
 
 
