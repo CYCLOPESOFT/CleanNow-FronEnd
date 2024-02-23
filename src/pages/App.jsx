@@ -1,15 +1,11 @@
 import React from 'react';
-// import { Button } from 'flowbite-react';
-// import { Avatar } from 'flowbite-react';
-
+import Login from './Auth/Login';
 export default function App() {
-  return  <Flowbite>
-  ...
-  <DarkThemeToggle />
-  ...
-</Flowbite>
-
-
+  return (
+  
+<div className="flex flex-wrap gap-2">
+    <Login />
+</div>);
   
 }
 
