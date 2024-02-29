@@ -9,7 +9,7 @@ export default function RecoveryForm() {
                 <label htmlFor="remember" className="ms-2 text-sm  text-gray-50 dark:text-gray-300">I'm agree with <a className='text-blue-500' href="">Term of Use</a> and <a className='text-blue-500' href="">Privacy Policy</a></label>
             </div>
 
-                <button className="w-full bg-blueRecoveryPassword text-sm text-white text-center mb-4 rounded-lg h-10 hover:bg-blue-700">Reset password</button>
+                <button className="w-full bg-blueRecoveryPassword text-sm text-white text-center mb-4 rounded-lg h-10 hover:bg-blue-700">Send Email</button>
 
                 <div className='text-center'>
                      <span className="text-gray-400 text-sm">If you need help, contact <a className='text-blue-500' href="">Flexible Support</a></span>
