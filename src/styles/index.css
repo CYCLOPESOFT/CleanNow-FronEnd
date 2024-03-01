@@ -11,6 +11,7 @@ body {
   margin: 0;
   padding: 0;
 }
+<<<<<<< HEAD
 
 *,
 ::before,
@@ -30,3 +31,14 @@ body {
 .animate-zoom {
   animation: zoom-in;
 }
+=======
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+>>>>>>> main
