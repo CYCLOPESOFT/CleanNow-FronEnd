@@ -1,8 +1,12 @@
-export default function LoginButton({title,imageUrl}){
-    return(
-    <button type="button" className="lg:justify-normal md:justify-center justify-center lg:w-max md:w-full w-full text-gray-100 bg-transparent hover:bg-gray-800 border-2 border-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-6 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 mb-2 mr-1">
-         <img className="w-5 h-5 mr-2" src={imageUrl} />
-         <span className="text-xs">{title}</span>
-    </button>
-    )
-}
+import { Button } from "flowbite-react";
+
+const LoginButton = ({ title, image }) => {
+  return (
+    <Button className="bg-purple-100 hover:!bg-purple-200 my-2 py-2 text-gray-800 font-normal dark:bg-slate-800 dark:text-gray-400 dark:hover:!bg-slate-700">
+      <img src={image} className="mr-2 h-5 w-5" alt="Icono Google" />
+      {title}
+    </Button>
+  );
+};
+
+export default LoginButton;

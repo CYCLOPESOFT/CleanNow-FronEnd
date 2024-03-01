@@ -3,14 +3,34 @@
 @tailwind utilities;
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-body{
+body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
+/* *,
+::before,
+::after {
+  --tw-ring-shadow: 0 0 !important;
+} */
+
+/* @keyframes zoom-in {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+} */
+
+.animate-zoom {
+  animation: zoom-in;
+}
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -20,3 +40,4 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
