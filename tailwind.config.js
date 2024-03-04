@@ -9,6 +9,8 @@ export default {
   theme: {
     extend: {
       colors: {
+        purpleHome: "#6F00DE",
+        grayHome: "#F5F5F5",
         blackLogin: "#181f29",
         blueLogin: "#1C65F2",
         grayInput: "#323A4A",

@@ -1,5 +1,6 @@
 import React from "react";
 import RoutesApp from "../routes/routes";
+import HomePage from "./Home/HomePage";
 
 
 const App = () => {
@@ -7,7 +8,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <RoutesApp />
+      <HomePage />
     </div>
   );
 };
