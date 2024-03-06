@@ -1,7 +1,7 @@
 import React from "react";
 import RoutesApp from "../routes/routes";
 import HomePage from "./Home/HomePage";
-import ServicesPage from "./Home/ServicesPage";
+import Solicitudes from "./Home/Solicitudes";
 
 
 const App = () => {
@@ -9,8 +9,7 @@ const App = () => {
 
   return (
     <div className="app">
-      {/* <HomePage /> */}
-      <ServicesPage />
+      <Solicitudes />
     </div>
   );
 };
