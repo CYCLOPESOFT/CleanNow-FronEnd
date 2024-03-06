@@ -41,3 +41,7 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+.w-89 {
+  width: 89%;
+}
+
