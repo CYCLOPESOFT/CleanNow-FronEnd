@@ -8,7 +8,7 @@ import { LuUser2 } from "react-icons/lu";
 import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
 import { RiHomeSmile2Line } from "react-icons/ri";
 import { PiStarFourBold } from "react-icons/pi";
-
+import { Link } from "react-router-dom";
 
 export default function Solicitudes(){
     return(
@@ -61,11 +61,12 @@ export default function Solicitudes(){
             </div>
             
             <footer className='h-28 sticky bottom-0 z-20 flex items-center justify-around bg-white py-8'>
+            <Link to='/'>
                 <a href='' className='flex items-center flex-col'>
                     <RiHomeSmile2Line className='w-10 h-10'/>
                     <span>Home</span>
                 </a>
-                
+            </Link>
                 <a href='' className='flex items-center flex-col text-purpleHome'>
                     <PiStarFourBold  className='w-10 h-10'/>
                     <span>Solicitudes</span>
