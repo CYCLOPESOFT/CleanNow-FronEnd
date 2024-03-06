@@ -17,6 +17,7 @@ export default {
         appColor: "#7100df",
         hoverAppColor: "#9264ff",
         activeAppColor: "#6645b2",
+        pinkSolicitudes: "#F2E5FF"
       },
     },
   },
