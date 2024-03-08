@@ -9,6 +9,7 @@ import Login from "../pages/Auth/Login";
 import Landing from "../pages/LandingPage/landing";
 import RecoveryPassword from "../pages/Auth/RecoveryPassword";
 import SendVerification from "../pages/Auth/SendVerification";
+import VerificationNumber from "../pages/Auth/VerificationNumber";
 const RoutesApp = () => (
   <Routes>
     <Route path="/" element={<Layout />}>
@@ -19,6 +20,7 @@ const RoutesApp = () => (
       <Route path="contact" element={<Contact />} />
       <Route path="recoverypassword" element={<RecoveryPassword />} />
       <Route path="send-code" element={<SendVerification />} />
+      <Route path="sendNumber" element={<VerificationNumber />} />
     </Route>
   </Routes>
 );
