@@ -1,8 +1,34 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import { Button, TextInput } from "flowbite-react";
-import { HiOutlineArrowLeft } from "react-icons/hi";
 import LoginButton from "/src/components/Login/LoginButton";
+import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { useSendCodeMutation } from "../../Slices/userApiSlice";
+import { setRegister } from "../../Slices/authSlice";
+
 export default function Login() {
+  const [email, setEmail] = useState("");
+  const navigate = useNavigate(); // useNavigate hook from react-router-dom
+  const dispatch = useDispatch(); // useDispatch hook from react-redux
+  const [sendCode, { loading }] = useSendCodeMutation(); // local state [useRegister, setUseRegister
+  const { useRegister } = useSelector((state) => state.auth); // useSelector hook from react-redux
+
+  useEffect(() => {
+    if (useRegister == true) {
+      navigate("/send-code");
+    }
+  }, [navigate, useRegister]);
+
+  const handleEmail = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await sendCode(email);
+      dispatch(setRegister({ email }));
+      console.log(res);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className="flex w-full justify-center items-center h-screen  dark:bg-gray-900">
       <div className="w-96 p-4">
@@ -16,23 +42,28 @@ export default function Login() {
           <h2 className="mb-4 text-base md:text-2xl font-medium dark:text-gray-300">
             correo electrónico?
           </h2>
-          <div className="mb-4 block">
-            <TextInput
-              id="email3"
-              type="email"
-              placeholder="Ingresa tu teléfono o correo electrónico"
-              sizing="lg"
-              required
-            />
-          </div>
-          <div className="mb-2 block">
-            <Button
-              label="2"
-              className="w-full bg-appColor py-2 hover:!bg-hoverAppColor dark:bg-appColor dark:hover:bg-hoverAppColor"
-            >
-              Continuar
-            </Button>
-          </div>
+          <form onSubmit={handleEmail} method="post">
+            <div className="mb-4 block">
+              <TextInput
+                id="email3"
+                type="email"
+                placeholder="Ingresa tu teléfono o correo electrónico"
+                sizing="lg"
+                required
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
+              />
+            </div>
+            <div className="mb-2 block">
+              <Button
+                label="2"
+                className="w-full bg-appColor py-2 hover:!bg-hoverAppColor dark:bg-appColor dark:hover:bg-hoverAppColor"
+                type="submit"
+              >
+                Continuar
+              </Button>
+            </div>
+          </form>
           <div className="flex items-center mb-4 pt-3">
             <hr className="flex-1 border-t border-gray-700" />
             <span className="mx-4 text-gray-700">o</span>
