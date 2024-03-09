@@ -8,7 +8,7 @@ import Form from '../../components/Home/Form';
 
 
 
-export default function HomePage(){
+export default function HomePage({selectedCard, setSelectedCard}){
     return(
         <div className='bg-grayHome h-full w-full'>    
             {/*header*/}
@@ -30,7 +30,7 @@ export default function HomePage(){
                 </div>
             </div>
 
-            <Form />
+            <Form setSelectedCard={setSelectedCard} selectedCard={selectedCard} />
            <History />
 
             <span className='mx-8 font-medium'>Recomendamos para ti</span>

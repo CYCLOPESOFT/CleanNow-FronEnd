@@ -15,14 +15,14 @@ export default function Solicitudes(){
         <div className="bg-grayHome h-full">
             <div className='bg-purpleHome w-full h-32 rounded-b-xl absolute top-0 z-0'></div>
                 <div className=" w-full h-36 flex justify-between items-center container mx-auto pt-3 px-8 relative z-10">
-                <a href="">
+                <Link to={'/'}>
                     <IoIosArrowBack className="text-white w-6 h-6"/>
-                </a>
+                </Link>
                      <span className="text-white text-xl font-md ml-8">Solicitudes</span>
-                    <a href="">
+                    <Link href="">
                         <TbPencil className="inline-block text-white text-xl mr-1"/> 
                         <span className="text-white ">Editar</span>
-                    </a>
+                    </Link>
                 </div>
 
             <div className="mt-4 bg-white border-2 p-1 border-gray-400 border-solid mx-12 rounded-xl">
@@ -61,16 +61,15 @@ export default function Solicitudes(){
             </div>
             
             <footer className='h-28 sticky bottom-0 z-20 flex items-center justify-around bg-white py-8'>
-            <Link to='/'>
-                <a href='' className='flex items-center flex-col'>
+            
+                <Link to='/' className='flex items-center flex-col'>
                     <RiHomeSmile2Line className='w-10 h-10'/>
                     <span>Home</span>
-                </a>
-            </Link>
-                <a href='' className='flex items-center flex-col text-purpleHome'>
+                </Link>
+                <Link to='/services' className='flex items-center flex-col text-purpleHome'>
                     <PiStarFourBold  className='w-10 h-10'/>
                     <span>Solicitudes</span>
-                </a>
+                </Link>
                 
                 <a href='' className='flex items-center flex-col'>
                     <IoChatbubbleEllipsesOutline className='w-10 h-10'/>
