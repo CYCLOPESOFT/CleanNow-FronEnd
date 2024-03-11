@@ -21,19 +21,21 @@ const NavbarHeader = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className="shadow-lg fixed w-full bg-appColor dark:bg-slate-800">
+    <div className="shadow-lg fixed w-full z-50 bg-appColor dark:bg-slate-800">
       <Navbar
         fluid
         rounded
-        className="mx-auto w-full md:w-4/5 lg:w-3/4 xl:w-2/3 bg-transparent dark:bg-transparent"
+        className="w-full bg-transparent dark:bg-transparent"
       >
         <Navbar.Brand href="">
           <BrandLogo />
         </Navbar.Brand>
         <div className="flex md:order-1">
-          <Button className="bg-white text-appColor hover:!bg-hoverAppColor hover:!text-white hover:shadow-lg active:outline-none dark:bg-appColor dark:text-white dark:hover:!bg-slate-700 transition ease-in-out hover:-translate-y-1 hover:scale-110">
-            Registrarse
-          </Button>
+          <Link to="/recoverypassword">
+            <Button className="bg-white text-appColor hover:!bg-hoverAppColor hover:!text-white hover:shadow-lg active:outline-none dark:bg-appColor dark:text-white dark:hover:!bg-slate-700 transition ease-in-out hover:-translate-y-1 hover:scale-110">
+              Registrarse
+            </Button>
+          </Link>
           <div className=" hidden md:block m-auto">
             <Tooltip className="md:hidden" content="Cambiar Tema">
               <Button
