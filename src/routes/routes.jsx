@@ -7,21 +7,24 @@ import Prices from "../pages/LandingPage/Prices";
 import Contact from "../pages/LandingPage/Contact";
 import Login from "../pages/Auth/Login";
 import Landing from "../pages/LandingPage/landing";
-import HomePage from "../pages/Home/HomePage"
-import Solicitudes from "../pages/Home/Solicitudes"
+import RecoveryPassword from "../pages/Auth/RecoveryPassword";
+import SendVerification from "../pages/Auth/SendVerification";
+import VerificationNumber from "../pages/Auth/VerificationNumber";
+import UserData from "../components/Login/UserData";
 
-const RoutesApp = () => {
-  return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-      
-        <Route index path="/" element={<HomePage/>}/>
-        <Route path="about" element={<About />} />
-        <Route path="services" element={<Solicitudes />} />
-        <Route path="prices" element={<Prices />} />
-        <Route path="contact" element={<Contact />} />
-      </Route>
-    </Routes>
-  );
-};
+const RoutesApp = () => (
+  <Routes>
+    <Route path="/" element={<Layout />}>
+      <Route index element={<Login />} />
+      <Route path="about" element={<About />} />
+      <Route path="services" element={<Services />} />
+      <Route path="prices" element={<UserData />} />
+      <Route path="contact" element={<VerificationNumber />} />
+      <Route path="recoverypassword" element={<RecoveryPassword />} />
+      <Route path="send-code" element={<SendVerification />} />
+      <Route path="sendNumber" element={<VerificationNumber />} />
+    </Route>
+  </Routes>
+);
+
 export default RoutesApp;
