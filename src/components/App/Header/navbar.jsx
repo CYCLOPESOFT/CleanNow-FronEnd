@@ -21,7 +21,7 @@ const NavbarHeader = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className="shadow-lg fixed w-full bg-appColor dark:bg-slate-800">
+    <div className="shadow-lg fixed w-full z-50 bg-appColor dark:bg-slate-800">
       <Navbar
         fluid
         rounded
