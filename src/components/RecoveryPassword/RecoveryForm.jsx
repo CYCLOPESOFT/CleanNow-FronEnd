@@ -40,6 +40,22 @@ export default function RecoveryForm() {
         </label>
       </div>
 
+             <div className="flex items-center h-5 my-6">
+                <input id="remember" type="checkbox" value="" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required />
+                <label htmlFor="remember" className="ms-2 text-sm  text-gray-50 dark:text-gray-300">I'm agree with <a className='text-blue-500' href="">Term of Use</a> and <a className='text-blue-500' href="">Privacy Policy</a></label>
+            </div>
+
+                <button className="w-full bg-blueRecoveryPassword text-sm text-white text-center mb-4 rounded-lg h-10 hover:bg-blue-700">Send Email</button>
+
+                <div className='text-center'>
+                     <span className="text-gray-400 text-sm">If you need help, contact <a className='text-blue-500' href="">Flexible Support</a></span>
+                  
+                 </div>
+                       
+        </div>
+    )
+}
+
       <div className="mt-12 mb-2 block">
         <Button
           label="2"
