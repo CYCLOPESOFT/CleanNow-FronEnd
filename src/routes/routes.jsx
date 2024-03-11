@@ -26,4 +26,5 @@ const RoutesApp = () => (
     </Route>
   </Routes>
 );
+
 export default RoutesApp;

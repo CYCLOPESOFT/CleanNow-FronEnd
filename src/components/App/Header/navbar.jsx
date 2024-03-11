@@ -25,7 +25,7 @@ const NavbarHeader = () => {
       <Navbar
         fluid
         rounded
-        className="mx-auto w-full md:w-4/5 lg:w-3/4 xl:w-2/3 bg-transparent dark:bg-transparent"
+        className="w-full bg-transparent dark:bg-transparent"
       >
         <Navbar.Brand href="">
           <BrandLogo />
