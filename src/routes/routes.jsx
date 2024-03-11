@@ -11,6 +11,7 @@ import RecoveryPassword from "../pages/Auth/RecoveryPassword";
 import SendVerification from "../pages/Auth/SendVerification";
 import VerificationNumber from "../pages/Auth/VerificationNumber";
 import UserData from "../components/Login/UserData";
+
 const RoutesApp = () => (
   <Routes>
     <Route path="/" element={<Layout />}>
@@ -21,6 +22,7 @@ const RoutesApp = () => (
       <Route path="contact" element={<VerificationNumber />} />
       <Route path="recoverypassword" element={<RecoveryPassword />} />
       <Route path="send-code" element={<SendVerification />} />
+      <Route path="sendNumber" element={<VerificationNumber />} />
     </Route>
   </Routes>
 );
