@@ -8,25 +8,24 @@ import Prices from "../pages/LandingPage/Prices";
 import Contact from "../pages/LandingPage/Contact";
 import Login from "../pages/Auth/Login";
 import Landing from "../pages/LandingPage/landing";
-import HomePage from "../pages/Home/HomePage"
-import Solicitudes from "../pages/Home/Solicitudes"
-import ServicesPage from "../pages/Home/ServicesPage";
-import { element } from "prop-types";
+import RecoveryPassword from "../pages/Auth/RecoveryPassword";
+import SendVerification from "../pages/Auth/SendVerification";
+import VerificationNumber from "../pages/Auth/VerificationNumber";
+import UserData from "../components/Login/UserData";
 
-const RoutesApp = () => {
+const RoutesApp = () => (
+  <Routes>
+    <Route path="/" element={<Layout />}>
+      <Route index element={<Login />} />
+      <Route path="about" element={<About />} />
+      <Route path="services" element={<Services />} />
+      <Route path="prices" element={<UserData />} />
+      <Route path="contact" element={<VerificationNumber />} />
+      <Route path="recoverypassword" element={<RecoveryPassword />} />
+      <Route path="send-code" element={<SendVerification />} />
+      <Route path="sendNumber" element={<VerificationNumber />} />
+    </Route>
+  </Routes>
+);
 
-  const [selectedCard, setSelectedCard] = useState(null);
-
-  return (
-    <Routes>
-        <Route index path="/" element={<HomePage selectedCard={selectedCard} setSelectedCard={setSelectedCard} />}/>
-        <Route path="about" element={<About />} />
-        <Route path="services" element={<Solicitudes />} />
-        <Route path="prices" element={<Prices />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path={`/${selectedCard}`} element={<ServicesPage selectedCardName={selectedCard}/>}/> 
-      
-    </Routes>
-  );
-};
 export default RoutesApp;
