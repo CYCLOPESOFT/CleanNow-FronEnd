@@ -9,10 +9,10 @@ import { HiX } from "react-icons/hi";
 
 export default function Login() {
   const [email, setEmail] = useState("");
-  const navigate = useNavigate(); // useNavigate hook from react-router-dom
-  const dispatch = useDispatch(); // useDispatch hook from react-redux
+  const navigate = useNavigate();
+  const dispatch = useDispatch(); 
   const [sendCode, { loading }] = useSendCodeMutation();
-  const { useRegister, messageError } = useSelector((state) => state.auth); // useSelector hook from react-redux
+  const { useRegister, messageError } = useSelector((state) => state.auth);
 
   useEffect(() => {
     if (useRegister == true) {

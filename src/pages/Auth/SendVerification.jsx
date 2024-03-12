@@ -26,7 +26,7 @@ const SendVerification = () => {
 
   useEffect(()=>{
     if(emailConfirm ===true){
-      navigate("/about");
+      navigate("/sendNumber");
     }
   },[navigate, emailConfirm])
   const handleOnClick = () => {

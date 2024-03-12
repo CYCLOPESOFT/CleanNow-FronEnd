@@ -55,23 +55,3 @@ export default function RecoveryForm() {
         </div>
     )
 }
-
-      <div className="mt-12 mb-2 block">
-        <Button
-          label="2"
-          className="w-full bg-appColor py-2 hover:!bg-hoverAppColor dark:bg-appColor dark:hover:bg-hoverAppColor"
-        >
-          Restablecer la contraseña
-        </Button>
-      </div>
-      <div className="text-center mt-10">
-        <span className="text-gray-400 text-sm">
-          Si necesitas ayuda contacta a{" "}
-          <a className="text-blue-500" href="">
-            Equipo de soporte CleanNow
-          </a>
-        </span>
-      </div>
-    </div>
-  );
-}

@@ -9,7 +9,9 @@ const initialState = {
   statusCode: 0,
   code:0,
   messageError: null,
-  emailConfirm:false
+  emailConfirm:false,
+  phone:0,
+  register: false
 };
 
 const authSlice = createSlice({
@@ -45,10 +47,23 @@ const authSlice = createSlice({
       if(state.code === action.payload){
         state.emailConfirm = true;
       }
+    },
+    setPhone:(state,action)=>{
+      state.phone = action.payload.selectedCountry + action.payload.number;
+    },
+    setStateRegister:(state,action)=>{
+      state.register = true;
     }
   },
 });
 
-export const { setCredentials, setRegister, setStatusCode,setEmailConfirm } = authSlice.actions;
+export const {
+  setCredentials,
+  setRegister,
+  setStatusCode,
+  setEmailConfirm,
+  setPhone,
+  setStateRegister,
+} = authSlice.actions;
 
 export default authSlice.reducer;
