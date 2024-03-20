@@ -15,7 +15,7 @@ export default function Solicitudes(){
         <div className="bg-grayHome h-full">
             <div className='bg-purpleHome w-full h-32 rounded-b-xl absolute top-0 z-0'></div>
                 <div className=" w-full h-36 flex justify-between items-center container mx-auto pt-3 px-8 relative z-10">
-                <Link to={'/'}>
+                <Link to={'/home'}>
                     <IoIosArrowBack className="text-white w-6 h-6"/>
                 </Link>
                      <span className="text-white text-xl font-md ml-8">Solicitudes</span>
@@ -62,11 +62,11 @@ export default function Solicitudes(){
             
             <footer className='h-28 sticky bottom-0 z-20 flex items-center justify-around bg-white py-8'>
             
-                <Link to='/' className='flex items-center flex-col'>
+                <Link to='/home' className='flex items-center flex-col'>
                     <RiHomeSmile2Line className='w-10 h-10'/>
                     <span>Home</span>
                 </Link>
-                <Link to='/services' className='flex items-center flex-col text-purpleHome'>
+                <Link to='/service' className='flex items-center flex-col text-purpleHome'>
                     <PiStarFourBold  className='w-10 h-10'/>
                     <span>Solicitudes</span>
                 </Link>

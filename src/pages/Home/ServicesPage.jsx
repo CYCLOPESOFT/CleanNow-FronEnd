@@ -12,7 +12,7 @@ export default function ServicesPage({selectedCardName}) {
         <div className="bg-grayHome h-full">
             <div className='bg-purpleHome w-full h-32 rounded-b-xl absolute top-0 z-0'></div>
             <div className="w-full h-36 flex justify-between items-center container mx-auto pt-3 px-8 relative z-10" style={{ marginBottom: '1.5rem' }}>
-                <Link to={'/'}>
+                <Link to={'/home'}>
                     <IoIosArrowBack className="text-white w-6 h-6" />
                 </Link>
                 <span className="text-white text-xl ml-10 justify-center w-full">Limpieza {selectedCardName}</span>
