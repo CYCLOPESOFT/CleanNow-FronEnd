@@ -13,8 +13,6 @@ import Solicitudes from "../pages/Home/Solicitudes";
 import Service from "../pages/Home/ServicesPage";
 
 const RoutesApp = () => {
-  const [selectedCard, setSelectedCard] = useState('casa');
-
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
@@ -27,9 +25,9 @@ const RoutesApp = () => {
         <Route path="send-code" element={<SendVerification />} />
         <Route path="sendNumber" element={<VerificationNumber />} />
       </Route>
-      <Route path="home" element={<HomePage selectedCard={selectedCard} setSelectedCard={setSelectedCard} />} />
+      <Route path="home" element={<HomePage/>} />
       <Route path="requests" element={<Solicitudes />} />
-      <Route path="service" element={<Service selectedCardName={selectedCard} />} />
+      <Route path="service" element={<Service />} />
     </Routes>
   );
 };

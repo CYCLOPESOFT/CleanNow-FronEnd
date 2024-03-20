@@ -2,10 +2,16 @@ import { LuHome } from "react-icons/lu";
 import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
 import { IoBagOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setSelected } from "../../Slices/seletedSlice";
 
-export default function Form({ selectedCard, setSelectedCard }) {
+export default function Form() {
+   
+    const dispatch = useDispatch();
+    const selected = useSelector((state)=>state.selected.request);
+
   const handleCardClick = (card) => {
-    setSelectedCard(card === selectedCard ? null : card);
+        dispatch(setSelected(card === selected ? null : card))
   };
 
   return (
@@ -16,35 +22,35 @@ export default function Form({ selectedCard, setSelectedCard }) {
         <div className='flex justify-between w-full mt-4 gap-4'>
           <Link
             className={`flex justify-center items-center flex-col container mx-auto border-solid border-2 border-black rounded-lg w-24 h-28 ${
-              selectedCard === 'Casa' ? 'bg-purpleHome text-white' : 'bg-white text-purpleHome'
+              selected === 'Casa' ? 'bg-purpleHome text-white' : 'bg-white text-purpleHome'
             }`}
             onClick={() => handleCardClick('Casa')}
             to='#'
           >
             <LuHome className={`text-purpleHome w-12 h-12 ${
-              selectedCard === 'Casa' ? 'bg-purpleHome text-white' : 'bg-white text-purpleHome'
+              selected === 'Casa' ? 'bg-purpleHome text-white' : 'bg-white text-purpleHome'
             } `} />
             <span>Casa</span>
           </Link>
           <Link
             className={`flex justify-center items-center flex-col container mx-auto border-solid border-2 border-black rounded-lg w-24 h-28 ${
-              selectedCard === 'Departamento' ? 'bg-purpleHome text-white' : 'bg-white text-purpleHome'
+              selected === 'Departamento' ? 'bg-purpleHome text-white' : 'bg-white text-purpleHome'
             }`}
             onClick={() => handleCardClick('Departamento')}
           >
             <HiOutlineBuildingOffice2 className={`text-purpleHome w-12 h-12 ${
-              selectedCard === 'Departamento' ? 'bg-purpleHome text-white' : 'bg-white text-purpleHome'
+              selected === 'Departamento' ? 'bg-purpleHome text-white' : 'bg-white text-purpleHome'
             } `} />
             <span>Depto</span>
           </Link>
           <Link
             className={`flex justify-center items-center flex-col container mx-auto border-solid border-2 border-black rounded-lg w-24 h-28 ${
-              selectedCard === 'Oficina' ? 'bg-purpleHome text-white' : 'bg-white text-purpleHome'
+              selected === 'Oficina' ? 'bg-purpleHome text-white' : 'bg-white text-purpleHome'
             }`}
             onClick={() => handleCardClick('Oficina')}
           >
             <IoBagOutline className={`text-purpleHome w-12 h-12 ${
-              selectedCard === 'Oficina' ? 'bg-purpleHome text-white' : 'bg-white text-purpleHome'
+              selected === 'Oficina' ? 'bg-purpleHome text-white' : 'bg-white text-purpleHome'
             } `} />
             <span>Oficina</span>
           </Link>
