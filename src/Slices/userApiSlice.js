@@ -18,14 +18,21 @@ export const usersApiSlice = apiSlice.injectEndpoints({
         body: data,
       }),
     }),
-    registrate:builder.mutation({
-      query:(data)=>({
-        url:`${USER_URL}/register`,
+    registrate: builder.mutation({
+      query: (data) => ({
+        url: `${USER_URL}/register`,
+        method: "POST",
+        body: data,
+      }),
+    }),
+    signIn: builder.mutation({
+      query: (data) => ({
+        url: `${USER_URL}/authenticate`,
         method:"POST",
         body:data
-      })
-    })
+      }),
+    }),
   }),
 });
 
-export const { useLoginMutation, useSendCodeMutation, useRegistrateMutation } = usersApiSlice;
+export const { useLoginMutation, useSendCodeMutation, useRegistrateMutation,useSignInMutation } = usersApiSlice;

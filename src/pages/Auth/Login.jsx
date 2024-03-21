@@ -4,13 +4,13 @@ import LoginButton from "/src/components/Login/LoginButton";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useSendCodeMutation } from "../../Slices/userApiSlice";
-import { setRegister, setStatusCode } from "../../Slices/authSlice";
+import { setAuth, setRegister, setStatusCode } from "../../Slices/authSlice";
 import { HiX } from "react-icons/hi";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
-  const dispatch = useDispatch(); 
+  const dispatch = useDispatch();
   const [sendCode, { loading }] = useSendCodeMutation();
   const { useRegister, messageError } = useSelector((state) => state.auth);
 
@@ -20,15 +20,17 @@ export default function Login() {
     }
   }, [navigate, useRegister]);
 
-
   const handleEmail = async (e) => {
     e.preventDefault();
     try {
       const res = await sendCode({ email });
       if (res.error === undefined) {
         dispatch(setRegister({ email, ...res }));
-      }else{
-        dispatch(setStatusCode({...res}));
+        if(res.data.message.includes("Send code for signIn")){
+          dispatch(setAuth());
+        }
+      } else {
+        dispatch(setStatusCode({ ...res }));
         setEmail("");
       }
     } catch (error) {

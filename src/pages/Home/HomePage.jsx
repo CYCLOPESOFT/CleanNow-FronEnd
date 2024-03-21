@@ -30,7 +30,7 @@ export default function HomePage({selectedCard, setSelectedCard}){
                 </div>
             </div>
 
-            <Form setSelectedCard={setSelectedCard} selectedCard={selectedCard} />
+            <Form  setSelectedCard={setSelectedCard} selectedCard={selectedCard} />
            <History />
 
             <span className='mx-8 font-medium'>Recomendamos para ti</span>
