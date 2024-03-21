@@ -7,6 +7,8 @@ import { useEffect, useState } from "react";
 import { useSignInMutation } from "../../Slices/userApiSlice";
 
 const SendVerification = () => {
+
+
   const { email, useRegister } = useSelector((state) => state.auth);
     const [signIn, { loading }] = useSignInMutation();
 
@@ -30,7 +32,7 @@ const SendVerification = () => {
       navigate("/sendNumber");
     }
     if(user !== null && emailConfirm ===false){
-      navigate("/home")
+      navigate("/home");
     }
   }, [navigate, emailConfirm, user]);
   const handleOnClick = () => {
