@@ -44,9 +44,12 @@ const authSlice = createSlice({
       state.authenticate = true;
     },
     setSign: (state, action) => {
-      console.log(action.payload)
       if (state.code === action.payload.code) {
         state.user = action.payload.sign.data;
+        localStorage.setItem(
+          "userInfo",
+          JSON.stringify(action.payload.sign.data)
+        );
       }
     },
     setStatusCode: (state, action) => {
@@ -75,7 +78,7 @@ export const {
   setPhone,
   setStateRegister,
   setAuth,
-  setSign
+  setSign,
 } = authSlice.actions;
 
 export default authSlice.reducer;
