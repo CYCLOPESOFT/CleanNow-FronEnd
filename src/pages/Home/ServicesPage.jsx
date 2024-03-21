@@ -6,16 +6,18 @@ import { RiHomeSmile2Line } from "react-icons/ri";
 import { PiStarFourBold } from "react-icons/pi";
 import { Link } from "react-router-dom";
 import { RiArrowRightSLine } from 'react-icons/ri';
+import { useSelector } from "react-redux";
 
-export default function ServicesPage({selectedCardName}) {
+export default function ServicesPage() {
+    const selected = useSelector((state)=>state.selected.request);
     return (
         <div className="bg-grayHome h-full">
             <div className='bg-purpleHome w-full h-32 rounded-b-xl absolute top-0 z-0'></div>
             <div className="w-full h-36 flex justify-between items-center container mx-auto pt-3 px-8 relative z-10" style={{ marginBottom: '1.5rem' }}>
-                <Link to={'/'}>
+                <Link to={'/home'}>
                     <IoIosArrowBack className="text-white w-6 h-6" />
                 </Link>
-                <span className="text-white text-xl ml-10 justify-center w-full">Limpieza {selectedCardName}</span>
+                <span className="text-white text-xl ml-10 justify-center w-full">Limpieza {selected}</span>
             </div>
 
             <span className="text-black font-bold text-xl ml-10 justify-center w-full">Detalles del domicilio</span>
