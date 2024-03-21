@@ -30,7 +30,7 @@ const SendVerification = () => {
       navigate("/sendNumber");
     }
     if(user !== null && emailConfirm ===false){
-      navigate("/about")
+      navigate("/home")
     }
   }, [navigate, emailConfirm, user]);
   const handleOnClick = () => {
