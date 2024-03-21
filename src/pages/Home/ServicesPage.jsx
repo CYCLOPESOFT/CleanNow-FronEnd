@@ -93,12 +93,40 @@ export default function ServicesPage() {
                 placeholder="Describe el tipo de limpieza que necesitan tus espacios para cumplir tus expectativas..."
             ></textarea>
 
-            <div className="border border-purpleHome w-89 mx-6 p-4 rounded-lg flex items-center justify-center" style={{ marginBottom: '1rem' }}>
+            <div className="border border-purpleHome w-89 mx-6 p-4 rounded-lg flex items-center justify-center" style={{ marginBottom: '2rem' }}>
                 <IoCameraOutline className="w-6 h-6 left-0 text-purpleHome" />
                 <span className="text-purpleHome ml-2 font-medium">Agregar fotos de los espacios</span>
             </div>
 
-            <footer className='h-28 sticky bottom-0 z-20 flex items-center justify-around bg-white py-8'>
+            
+            <div className="" style={{ marginBottom: '1rem' }}>
+                <span className="text-black font-bold text-xl ml-10 justify-center w-full">Tiempo de limpieza</span>
+            </div>
+
+            <div className="" style={{ marginBottom: '1rem', maxWidth: '350px' }}>
+                <span className="text-gray-500  ml-10 justify-center w-full" style={{ display: 'inline-block', textAlign: 'justify' }}>
+                    Estimamos la cantidad de horas según el tamaño de superficie del lugar a limpiar.
+                </span>
+            </div>
+
+            <div className='bg-white min-h-min-height min-w-min-width mt-8 rounded-lg mx-6 p-8' style={{ marginBottom: '1rem' }}>
+                <div className="flex items-center justify-between mb-4 pb-4 border-b border-gray-300">
+                    <label className="font-bold">1 hora - Deptos hasta 40m<sup>2</sup></label>
+                    <input type="checkbox" className="form-checkbox h-5 w-5 text-purpleHome" />
+                </div>
+                <div className="flex items-center justify-between mb-4 pb-4 border-b border-gray-300">
+                    <label className="font-bold">2 hora - Deptos hasta 80m<sup>2</sup></label>
+                    <input type="checkbox" className="form-checkbox h-5 w-5 text-purpleHome" />
+                </div>
+                <div className="flex items-center justify-between ">
+                    <label className="font-bold">3 hora - Deptos mas de 80m<sup>2</sup></label>
+                    <input type="checkbox" className="form-checkbox h-5 w-5 text-purpleHome" />
+                </div>
+            </div>
+
+<button className="bg-purpleHome text-white text-xl w-89 mx-6 p-4 rounded-lg flex items-center justify-center">Continuar</button>
+
+            <footer className='h-28 sticky bottom-0 z-20 text-sm flex items-center justify-around bg-white py-8'>
                 <Link to='/'>
                     <a href='' className='flex items-center flex-col'>
                         <RiHomeSmile2Line className='w-10 h-10' />
