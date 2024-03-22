@@ -12,6 +12,8 @@ import HomePage from "../pages/Home/HomePage";
 import Solicitudes from "../pages/Home/Solicitudes";
 import Service from "../pages/Home/ServicesPage";
 import PerfilPage from "../pages/Home/PerfilPage";
+import ProfileAssistant from "../pages/Home/ProfileAssistant";
+import Asistente from "../pages/Home/Assistant";
 const RoutesApp = () => {
   return (
     <Routes>
@@ -29,6 +31,9 @@ const RoutesApp = () => {
       <Route path="requests" element={<Solicitudes />} />
       <Route path="service" element={<Service />} />
       <Route path="profile" element={<PerfilPage />} />
+      <Route path="assistant" element={<Asistente />} />
+      <Route path="profileassistant" element={<ProfileAssistant />} />
+      
     </Routes>
   );
 };

@@ -175,7 +175,7 @@ export default function ServicesPage() {
     </div>
 </div>
 
-<Link to={'/home'}>
+<Link to={'/assistant'}>
     <button className="bg-purpleHome text-white text-xl w-89 mx-6 p-4 rounded-lg flex items-center justify-center" onClick={handleSubmit}>Continuar</button>
 </Link>
 

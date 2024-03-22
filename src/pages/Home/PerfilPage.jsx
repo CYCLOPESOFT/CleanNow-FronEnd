@@ -18,9 +18,9 @@ export default function PerfilPage(){
     <div className="bg-grayHome h-full">
         <div className='bg-purpleHome w-full h-1/3 rounded-b-xl absolute top-0 z-25'></div>
         <div className="w-full flex h-24 justify-between items-center container mx-auto pt-12 px-6 relative z-10">
-            <a href="">
+            <Link to={'/home'}>
                 <IoIosArrowBack className="text-white w-6 h-6"/>
-            </a>
+            </Link>
             <span className="text-white text-xl font-md ml-10">Mi perfil</span>
             <a href="">
                 <TbPencil className="inline-block text-white text-xl mr-1"/> 
@@ -93,16 +93,16 @@ export default function PerfilPage(){
         <div className='bg-grayHome h-min-height w-min-widht mt-2 rounded-lg mx-6 p-8' style={{ marginBottom: '1rem' }}></div>
 
         <footer className='h-28 sticky bottom-0 z-20 text-sm flex items-center justify-around bg-white py-8'>
-                <Link to='/'>
+                <Link to='/home'>
                     <a href='' className='flex items-center flex-col'>
                         <RiHomeSmile2Line className='w-10 h-10' />
                         <span>Home</span>
                     </a>
                 </Link>
-                <a href='' className='flex items-center flex-col text-purpleHome'>
+                <Link to={'/requests'} className='flex items-center flex-col'>
                     <PiStarFourBold className='w-10 h-10' />
                     <span>Solicitudes</span>
-                </a>
+                </Link>
                 <a href='' className='flex items-center flex-col'>
                     <IoChatbubbleEllipsesOutline className='w-10 h-10' />
                     <span>Chat</span>

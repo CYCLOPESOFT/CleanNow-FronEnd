@@ -62,18 +62,6 @@ const domicileSlice = createSlice({
         state.loading = false;
         state.error = action.error.message;
       })
-      .addCase(sendDomicileDetails.pending, (state) => {
-        state.loading = true;
-        state.error = null;
-      })
-      .addCase(sendDomicileDetails.fulfilled, (state, action) => {
-        state.loading = false;
-        state.data = action.payload;
-      })
-      .addCase(sendDomicileDetails.rejected, (state, action) => {
-        state.loading = false;
-        state.error = action.error.message;
-      });
   }
 });
 

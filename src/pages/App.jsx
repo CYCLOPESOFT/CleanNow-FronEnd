@@ -6,10 +6,13 @@ import ServicesPage from "./Home/ServicesPage";
 import PerfilPage from "./Home/PerfilPage";
 import Prueba from "./Home/Prueba";
 
+import ProfileAssistant from "./Home/ProfileAssistant";
+import Asistente from "./Home/Assistant";
+
 const App = () => {
   return (
     <div className="app">
-      <RoutesApp />
+      <RoutesApp/>
     </div>
   );
 };

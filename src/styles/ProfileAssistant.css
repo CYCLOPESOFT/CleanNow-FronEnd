@@ -1,0 +1,16 @@
+/* ProfileAssistant.css */
+
+/* Estilos personalizados para el contenedor del selector de hora */
+.time-picker-container {
+    width: 200px; /* Ancho del contenedor */
+  }
+  
+  /* Estilos personalizados para el botón Contratar */
+  .btn {
+    @apply bg-primary text-white font-bold py-2 px-4 rounded; /* Utiliza las clases de Flowbite para el botón */
+  }
+  
+  .btn:hover {
+    @apply bg-primary-dark; /* Utiliza las clases de Flowbite para el estado hover del botón */
+  }
+  
