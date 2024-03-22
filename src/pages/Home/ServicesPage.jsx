@@ -35,7 +35,7 @@ export default function ServicesPage() {
     };
 
     const handleSubmit = (e) => {
-        e.preventDefault();
+       
         dispatch(sendDomicileDetails(formData));
     };
 
@@ -175,8 +175,10 @@ export default function ServicesPage() {
     </div>
 </div>
 
+<Link to={'/home'}>
+    <button className="bg-purpleHome text-white text-xl w-89 mx-6 p-4 rounded-lg flex items-center justify-center" onClick={handleSubmit}>Continuar</button>
+</Link>
 
-<button className="bg-purpleHome text-white text-xl w-89 mx-6 p-4 rounded-lg flex items-center justify-center" onClick={handleSubmit}>Continuar</button>
 
 <footer className='h-28 sticky bottom-0 z-20 text-sm flex items-center justify-around bg-white py-8'>
     <Link to='/home'>
