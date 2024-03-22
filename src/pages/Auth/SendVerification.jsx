@@ -2,11 +2,16 @@ import { TextInput, Button } from "flowbite-react";
 import { HiOutlineArrowLeft } from "react-icons/hi";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { setEmailConfirm, setRegister } from "../../Slices/authSlice";
+import { setEmailConfirm, setRegister, setSign } from "../../Slices/authSlice";
 import { useEffect, useState } from "react";
+import { useSignInMutation } from "../../Slices/userApiSlice";
 
 const SendVerification = () => {
+
+
   const { email, useRegister } = useSelector((state) => state.auth);
+    const [signIn, { loading }] = useSignInMutation();
+
   const [number1, setNumber1] = useState(null);
   const [number2, setNumber2] = useState(null);
   const [number3, setNumber3] = useState(null);
@@ -14,8 +19,7 @@ const SendVerification = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { emailConfirm } = useSelector((state) => state.auth);
-
+  const { emailConfirm, authenticate, user } = useSelector((state) => state.auth);
 
   useEffect(() => {
     if (useRegister === false) {
@@ -23,19 +27,31 @@ const SendVerification = () => {
     }
   }, [navigate, useRegister]);
 
-
-  useEffect(()=>{
-    if(emailConfirm ===true){
+  useEffect(() => {
+    if (emailConfirm === true) {
       navigate("/sendNumber");
     }
-  },[navigate, emailConfirm])
+    if(user !== null && emailConfirm ===false){
+      navigate("/home");
+    }
+  }, [navigate, emailConfirm, user]);
   const handleOnClick = () => {
     dispatch(setRegister({ email }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    dispatch(setEmailConfirm(number1 + number2 + number3 + number4));
+    try {
+      let suma = number1 + number2 + number3 + number4;
+      if (authenticate !== false) {
+        let sign = await signIn({ email });
+        dispatch(setSign({ code: suma, sign }));
+      }else{
+         dispatch(setEmailConfirm(suma));
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <div className="flex items-center justify-center min-h-screen">
