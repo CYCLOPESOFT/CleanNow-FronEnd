@@ -17,7 +17,7 @@ const UserData = () => {
   const { email, phone, register } = useSelector((state) => state.auth);
   useEffect(()=>{
     if(register!== false){
-      navigate("/about")
+      navigate("/home")
     }
   },[navigate, register])
 

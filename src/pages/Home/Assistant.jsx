@@ -11,7 +11,7 @@ function Asistente() {
         <div className="bg-grayHome min-h-screen">
             <div className='bg-purpleHome w-full h-32 rounded-b-xl flex items-center justify-between px-8'>
                 <div>
-                    <Link to={'/'}>
+                    <Link to={'/home'}>
                         <IoIosArrowBack className="text-white w-6 h-6" />
                     </Link>
                 </div>
@@ -20,138 +20,186 @@ function Asistente() {
 
             </div>
 
-            <div className="mt-4" style={{ marginRight: 'auto', marginLeft: '3rem' }}> {/* Ajuste de estilo para el filtro */}
-                <div className="flex items-center">
-                    <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6F00DE" viewBox="0 0 24 24">
-                        <path d="M10.83 5a3.001 3.001 0 0 0-5.66 0H4a1 1 0 1 0 0 2h1.17a3.001 3.001 0 0 0 5.66 0H20a1 1 0 1 0 0-2h-9.17ZM4 11h9.17a3.001 3.001 0 0 1 5.66 0H20a1 1 0 1 1 0 2h-1.17a3.001 3.001 0 0 1-5.66 0H4a1 1 0 1 1 0-2Zm1.17 6H4a1 1 0 1 0 0 2h1.17a3.001 3.001 0 0 0 5.66 0H20a1 1 0 1 0 0-2h-9.17a3.001 3.001 0 0 0-5.66 0Z" />
-                    </svg>
-                    <span className="ml-2 text-purpleHome ">Filtros</span>
-                    <p className="ml-8 text-purpleHome" style={{ border: "2px solid purple", padding: "1px" }}>Córdoba</p>
-                    <p className="ml-4 text-purpleHome" style={{ border: "2px solid purple", padding: "1px" }}>Valoraciones</p>
+            <div className="mt-4 flex justify-center" > {/* Ajuste de estilo para el filtro */}
+                <div className="flex mt-2 items-center">
+                    <div className='flex mr-16'>
+                        <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6F00DE" viewBox="0 0 24 24">
+                            <path d="M10.83 5a3.001 3.001 0 0 0-5.66 0H4a1 1 0 1 0 0 2h1.17a3.001 3.001 0 0 0 5.66 0H20a1 1 0 1 0 0-2h-9.17ZM4 11h9.17a3.001 3.001 0 0 1 5.66 0H20a1 1 0 1 1 0 2h-1.17a3.001 3.001 0 0 1-5.66 0H4a1 1 0 1 1 0-2Zm1.17 6H4a1 1 0 1 0 0 2h1.17a3.001 3.001 0 0 0 5.66 0H20a1 1 0 1 0 0-2h-9.17a3.001 3.001 0 0 0-5.66 0Z" />
+                        </svg>
+                        <span className="ml-2 text-purpleHome ">Filtros</span>
+                    </div>
+                    
+                    <div className='flex gap-2'>
+                        <p className="rounded-lg text-purpleHome border-2 border-solid border-purpleHome py-1 px-2" >Córdoba</p>
+                        <p className="rounded-lg text-purpleHome border-2 border-solid border-purpleHome py-1 px-2" >Valoraciones</p>
+                    </div>
+                    
 
 
                 </div>
             </div>
-            <div className="container mx-auto px-8 relative z-10">
+            <div className="container mx-auto relative z-10">
                 {/* Contenido principal */}
-                <main className="App-main container  pt-5">
+                <main className="App-main container pt-5">
                     {/* Tarjetas de asistentes */}
                     <Card className="assistant-card mb-8">
-                        <div style={{ display: 'flex', alignItems: 'center' }}>
+                        <div className='flex flex-col-2 flex-row'>
+                            <div className='flex flex-col'>
                             <img src="src/assets/images/PaolaT.png" alt="Paola Torres" className="w-32 h-32 rounded-1.75rem mr-4 object-cover" />
-                            <div>
-                               <h2 className="text-xl font-bold mb-1 flex items-center">
+
+                            <div className='rounded-lg bg-lightGreen text-white w-32 p-2 text-center mt-2'>
+                                    $1,400/hr
+                            </div>
+                            </div>
+                            <div className='flex flex-col gap-1'>
+                               <h2 className="text-xl font-bold mb-1 flex">
                                 Paola Torres
-                                <Link to={'/'} style={{ display: 'inline-flex', alignItems: 'center', marginLeft: '0.25rem' }}>
+                                <Link style={{ display: 'inline-flex', alignItems: 'center', marginLeft: '0.25rem' }}>
                                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#01A890" viewBox="0 0 24 24">
                                             <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd" />
                                         </svg>
                                 </Link>
                               </h2>
-                                <p>35 años</p>
-                                <p>Córdoba</p>
-                                <p>
-                                    <span className="star-icon" style={{ color: 'yellow' }}>★</span>
-                                    <span className="star-icon" style={{ color: 'yellow' }}>★</span>
-                                    <span className="star-icon" style={{ color: 'yellow' }}>★</span>
-                                    <span className="star-icon" style={{ color: 'yellow' }}>★</span>
-                                    <span className="star-icon" style={{ color: 'yellow' }}>☆</span> (10)
+                                <div>
+                                <p className='text-lg'>35 años</p>
+                                <p className='text-lg'>Córdoba</p>
+                                </div>
+                                <p className='text-xl text-gray-500'>
+                                    <span className="star-icon" style={{ color: 'orange' }}>★</span>
+                                    <span className="star-icon" style={{ color: 'orange' }}>★</span>
+                                    <span className="star-icon" style={{ color: 'orange' }}>★</span>
+                                    <span className="star-icon" style={{ color: 'orange' }}>★</span>
+                                    <span className="star-icon" style={{ color: 'orange' }}>☆</span> 
+                                    <span className='text-lg'>(10)</span>
                                 </p>
-                                <p>
-                                    <span style={{ color: '#6F00DE' }}>5 años de experiencia</span> <span style={{ color: '#6F00DE' }}>&gt;</span>
-                                </p>
+                                <Link to={'/profileassistant'} className='cursor-pointer text-purpleHome text-lg' >
+                                    <span className=''>5 años de experiencia <span style={{ color: '#6F00DE' }}>&gt;</span></span>
+                                </Link>
+
+                                
                             </div>
                         </div>
-                        <div style={{ backgroundColor: '#01A890', padding: '0.5rem', borderRadius: '0.25rem', color: '#fff', maxWidth: '7rem', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', marginBottom: '0.5rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                            $1,400/hr
-                        </div>
+                        
                     </Card>
 
-
                     <Card className="assistant-card mb-8">
-                        <div style={{ display: 'flex', alignItems: 'center' }}>
-                            <img src="src/assets/images/JuanaM.png" alt="Paola Torres" className="w-32 h-32 rounded-1.75rem mr-4 object-cover" />
-                            <div>
-                            <h2 className="text-xl font-bold mb-1 flex items-center">
-                                Juana Moreno
-                                <Link to={'/'} style={{ display: 'inline-flex', alignItems: 'center', marginLeft: '0.25rem' }}>
+                        <div className='flex flex-col-2 flex-row'>
+                            <div className='flex flex-col'>
+                            <img src="src/assets/images/PaolaT.png" alt="Paola Torres" className="w-32 h-32 rounded-1.75rem mr-4 object-cover" />
+
+                            <div className='rounded-lg bg-lightGreen text-white w-32 p-2 text-center mt-2'>
+                                    $1,400/hr
+                            </div>
+                            </div>
+                            <div className='flex flex-col gap-1'>
+                               <h2 className="text-xl font-bold mb-1 flex">
+                                Paola Torres
+                                <Link style={{ display: 'inline-flex', alignItems: 'center', marginLeft: '0.25rem' }}>
                                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#01A890" viewBox="0 0 24 24">
                                             <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd" />
                                         </svg>
                                 </Link>
-                            </h2>
-                                <p>40 años</p>
-                                <p>Córdoba</p>
-                                <p>
-                                    <span className="star-icon" style={{ color: 'yellow' }}>★</span>
-                                    <span className="star-icon" style={{ color: 'yellow' }}>★</span>
-                                    <span className="star-icon" style={{ color: 'yellow' }}>★</span>
-                                    <span className="star-icon" style={{ color: 'yellow' }}>★</span>
-                                    <span className="star-icon" style={{ color: 'yellow' }}>☆</span> (9)
+                              </h2>
+                                <div>
+                                <p className='text-lg'>35 años</p>
+                                <p className='text-lg'>Córdoba</p>
+                                </div>
+                                <p className='text-xl text-gray-500'>
+                                    <span className="star-icon" style={{ color: 'orange' }}>★</span>
+                                    <span className="star-icon" style={{ color: 'orange' }}>★</span>
+                                    <span className="star-icon" style={{ color: 'orange' }}>★</span>
+                                    <span className="star-icon" style={{ color: 'orange' }}>★</span>
+                                    <span className="star-icon" style={{ color: 'orange' }}>☆</span> 
+                                    <span className='text-lg'>(10)</span>
                                 </p>
-                                <p><span style={{ color: '#6F00DE' }}>10 años de experiencia</span> <span style={{ color: '#6F00DE' }}>&gt;</span></p>
+                                <Link to={'/profileassistant'} className='cursor-pointer text-purpleHome text-lg' >
+                                    <span className=''>5 años de experiencia <span style={{ color: '#6F00DE' }}>&gt;</span></span>
+                                </Link>
+
+                                
                             </div>
                         </div>
-                        <div style={{ backgroundColor: '#01A890', padding: '0.5rem', borderRadius: '0.25rem', color: '#fff', maxWidth: '7rem', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', marginBottom: '0.5rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                            $1,450/hr
-                        </div>
+                        
                     </Card>
 
                     <Card className="assistant-card mb-8">
-                        <div style={{ display: 'flex', alignItems: 'center' }}>
-                            <img src="src/assets/images/FedericoG.png" alt="Paola Torres" className="w-32 h-32 rounded-1.75rem mr-4 object-cover" />
-                            <div>
-                            <h2 className="text-xl font-bold mb-1 flex items-center">
-                                Federico Gómez
-                                <Link to={'/'} style={{ display: 'inline-flex', alignItems: 'center', marginLeft: '0.25rem' }}>
+                        <div className='flex flex-col-2 flex-row'>
+                            <div className='flex flex-col'>
+                            <img src="src/assets/images/PaolaT.png" alt="Paola Torres" className="w-32 h-32 rounded-1.75rem mr-4 object-cover" />
+
+                            <div className='rounded-lg bg-lightGreen text-white w-32 p-2 text-center mt-2'>
+                                    $1,400/hr
+                            </div>
+                            </div>
+                            <div className='flex flex-col gap-1'>
+                               <h2 className="text-xl font-bold mb-1 flex">
+                                Paola Torres
+                                <Link style={{ display: 'inline-flex', alignItems: 'center', marginLeft: '0.25rem' }}>
                                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#01A890" viewBox="0 0 24 24">
                                             <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd" />
                                         </svg>
                                 </Link>
-                            </h2>
-                                <p>29 años</p>
-                                <p>Córdoba</p>
-                                <p>
-                                    <span className="star-icon" style={{ color: 'yellow' }}>★</span>
-                                    <span className="star-icon" style={{ color: 'yellow' }}>★</span>
-                                    <span className="star-icon" style={{ color: 'yellow' }}>★</span>
-                                    <span className="star-icon" style={{ color: 'yellow' }}>☆</span>
-                                    <span className="star-icon" style={{ color: 'yellow' }}>☆</span> (5)
+                              </h2>
+                                <div>
+                                <p className='text-lg'>35 años</p>
+                                <p className='text-lg'>Córdoba</p>
+                                </div>
+                                <p className='text-xl text-gray-500'>
+                                    <span className="star-icon" style={{ color: 'orange' }}>★</span>
+                                    <span className="star-icon" style={{ color: 'orange' }}>★</span>
+                                    <span className="star-icon" style={{ color: 'orange' }}>★</span>
+                                    <span className="star-icon" style={{ color: 'orange' }}>★</span>
+                                    <span className="star-icon" style={{ color: 'orange' }}>☆</span> 
+                                    <span className='text-lg'>(10)</span>
                                 </p>
-                                <p><span style={{ color: '#6F00DE' }}>7 años de experiencia</span> <span style={{ color: '#6F00DE' }}>&gt;</span></p>
+                                <Link to={'/profileassistant'} className='cursor-pointer text-purpleHome text-lg' >
+                                    <span className=''>5 años de experiencia <span style={{ color: '#6F00DE' }}>&gt;</span></span>
+                                </Link>
+
+                                
                             </div>
                         </div>
-                        <div style={{ backgroundColor: '#01A890', padding: '0.5rem', borderRadius: '0.25rem', color: '#fff', maxWidth: '7rem', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', marginBottom: '0.5rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                            $1,500/hr
-                        </div>
+                        
                     </Card>
+
                     <Card className="assistant-card mb-8">
-                        <div style={{ display: 'flex', alignItems: 'center' }}>
-                            <img src="src/assets/images/FedericoG.png" alt="Paola Torres" className="w-32 h-32 rounded-1.75rem mr-4 object-cover" />
-                            <div>
-                            <h2 className="text-xl font-bold mb-1 flex items-center">
-                                Maria Perez
-                                <Link to={'/'} style={{ display: 'inline-flex', alignItems: 'center', marginLeft: '0.25rem' }}>
+                        <div className='flex flex-col-2 flex-row'>
+                            <div className='flex flex-col'>
+                            <img src="src/assets/images/PaolaT.png" alt="Paola Torres" className="w-32 h-32 rounded-1.75rem mr-4 object-cover" />
+
+                            <div className='rounded-lg bg-lightGreen text-white w-32 p-2 text-center mt-2'>
+                                    $1,400/hr
+                            </div>
+                            </div>
+                            <div className='flex flex-col gap-1'>
+                               <h2 className="text-xl font-bold mb-1 flex">
+                                Paola Torres
+                                <Link style={{ display: 'inline-flex', alignItems: 'center', marginLeft: '0.25rem' }}>
                                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#01A890" viewBox="0 0 24 24">
                                             <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd" />
                                         </svg>
                                 </Link>
-                            </h2>
-                                <p>32 años</p>
-                                <p>Córdoba</p>
-                                <p>
-                                    <span className="star-icon" style={{ color: 'yellow' }}>★</span>
-                                    <span className="star-icon" style={{ color: 'yellow' }}>★</span>
-                                    <span className="star-icon" style={{ color: 'yellow' }}>★</span>
-                                    <span className="star-icon" style={{ color: 'yellow' }}>☆</span>
-                                    <span className="star-icon" style={{ color: 'yellow' }}>☆</span> (6)
+                              </h2>
+                                <div>
+                                <p className='text-lg'>35 años</p>
+                                <p className='text-lg'>Córdoba</p>
+                                </div>
+                                <p className='text-xl text-gray-500'>
+                                    <span className="star-icon" style={{ color: 'orange' }}>★</span>
+                                    <span className="star-icon" style={{ color: 'orange' }}>★</span>
+                                    <span className="star-icon" style={{ color: 'orange' }}>★</span>
+                                    <span className="star-icon" style={{ color: 'orange' }}>★</span>
+                                    <span className="star-icon" style={{ color: 'orange' }}>☆</span> 
+                                    <span className='text-lg'>(10)</span>
                                 </p>
-                                <p><span style={{ color: '#6F00DE' }}>6 años de experiencia</span> <span style={{ color: '#6F00DE' }}>&gt;</span></p>
+                                <Link to={'/profileassistant'} className='cursor-pointer text-purpleHome text-lg' >
+                                    <span className=''>5 años de experiencia <span style={{ color: '#6F00DE' }}>&gt;</span></span>
+                                </Link>
+
+                                
                             </div>
                         </div>
-                        <div style={{ backgroundColor: '#01A890', padding: '0.5rem', borderRadius: '0.25rem', color: '#fff', maxWidth: '7rem', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', marginBottom: '0.5rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                            $1,500/hr
-                        </div>
+                        
                     </Card>
 
                 </main>

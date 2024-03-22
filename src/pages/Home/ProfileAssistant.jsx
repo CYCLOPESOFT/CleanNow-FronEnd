@@ -12,7 +12,7 @@ function ProfileAssistant() {
     <div className="bg-gray-100 min-h-screen">
       <div className="bg-purpleHome w-full h-32 rounded-b-xl flex items-center justify-between px-8">
         <div>
-          <Link to={"/"}>
+          <Link to={"/assistant"}>
             <IoIosArrowBack className="text-white w-6 h-6" />
           </Link>
         </div>
@@ -20,19 +20,18 @@ function ProfileAssistant() {
         <div></div> {/* Este div vacío ayuda a empujar el texto al centro */}
       </div>
 
-      <div className="container mx-auto px-4 py-8">
-        <Card className="p-4 mb-8">
+      <div className="pt-8">
+        <Card className="mb-8 mx-4">
           <div className="flex items-center">
             <img
               src="src/assets/images/PaolaT.png"
               alt="Paola Torres"
               className="w-32 h-32 rounded-1.75rem mr-4 object-cover"
             />
-            <div>
+            <div className="flex gap-1 flex-col">
               <h2 className="text-xl font-bold mb-1 flex items-center">
                 Paola Torres
                 <Link
-                  to={"/"}
                   style={{
                     display: "inline-flex",
                     alignItems: "center",
@@ -56,34 +55,22 @@ function ProfileAssistant() {
                   </svg>
                 </Link>
               </h2>
-              <p className="text-gray-600">35 años - Córdoba</p>
               <p className="flex items-center text-yellow-500">
                 <BsStarFill className="mr-1" />
                 <span>4.8 (Opiniones)</span>
               </p>
-            </div>
-          </div>
-          <div
-            style={{
-              backgroundColor: "#01A890",
-              padding: "0.5rem",
-              borderRadius: "0.25rem",
-              color: "#fff",
-              maxWidth: "7rem",
-              overflow: "hidden",
-              textOverflow: "ellipsis",
-              whiteSpace: "nowrap",
-              marginBottom: "0.5rem",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
+              <p className="text-gray-600">35 años - Córdoba</p>
+
+              <div className="text-white bg-lightGreen w-32 px-4 py-1 rounded-lg text-center"
           >
             $1,450/hr
           </div>
+            </div>
+          </div>
+          
         </Card>
 
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mx-auto px-4 pt-8">
           <div className="mb-8 pb-4">
             <h2 className="border-b border-gray-500 border-solid pb-2 text-xl font-bold mb-4">
               Sobre Mi 5 años
@@ -130,14 +117,24 @@ function ProfileAssistant() {
             </div>
           </div>
 
-          <footer className="h-28 sticky bottom-0 z-20 flex items-center justify-around bg-white py-8">
-            <div className="flex items-center flex-col">
-              <button className="ml-28 bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg border border-blue-700">
-                Contratar
-              </button>
+          
+        </div>
+        <footer className="h-28 sticky bottom-0 z-20 flex items-center bg-white py-8">
+            <div className="flex gap-16 items-center px-4">
+              
+              <div className="flex flex-col">
+                <span className="font-semibold">2 hr x $1,400</span>
+                <span>17/08/2024</span>
+                <span>8:00 AM</span>
+              </div>
+
+              <Link to={'/requests'}>
+                <button className="bg-purpleHome hover:bg-purple-800 text-white font-semibold text-center px-16 py-3 rounded-lg">
+                  Contratar
+                </button>
+              </Link>
             </div>
           </footer>
-        </div>
       </div>
     </div>
   );
