@@ -19,7 +19,19 @@ export default function ServicesPage() {
         time: '', // Agregar estado para almacenar el valor de tiempo seleccionado
         imageDomicile: ''
     });
+        
+      
+    const [selectedFile, setSelectedFile] = useState(null);
 
+    const handleFileChange = (event) => {
+        const file = event.target.files[0];
+        setFormData({
+          ...formData,
+          imageDomicile: file.name // Asigna el nombre del archivo al estado imageDomicile
+        });
+        setSelectedFile(file);
+      };
+      
     const handleChange = (e) => {
         setFormData({
             ...formData,
@@ -33,6 +45,7 @@ export default function ServicesPage() {
             time: e.target.value // Asignar el valor del radio button a time
         });
     };
+    
 
     const handleSubmit = (e) => {
        
@@ -80,7 +93,7 @@ export default function ServicesPage() {
                             htmlFor="floating_piso/departamento"
                             className="peer-focus:font-medium absolute text-lg text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                         >
-                            Piso/Departamento
+                            Piso/{selected}
                         </label>
                         {/*De este input tomaras el apt */}
                        
@@ -111,7 +124,7 @@ export default function ServicesPage() {
         className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
         placeholder=" "
         required
-        onChange={handleChange}
+        //onChange={handleChange}
     />
 </div>
 </form>
@@ -140,6 +153,7 @@ export default function ServicesPage() {
         id="fileInput"
         type="file"
         className="hidden"
+        onChange={handleFileChange}
     />
 </div>
 <div className="" style={{ marginBottom: '1rem' }}>
@@ -158,25 +172,25 @@ export default function ServicesPage() {
     <div className="flex items-center justify-between mb-4 pb-4 border-b border-gray-300">
         <label htmlFor="radio1" className="font-bold cursor-pointer">
             <input type="radio" id="radio1" name="timeOption" value="1" className="mr-2 cursor-pointer" onChange={handleRadioChange} />
-            1 hora - Deptos hasta 40m<sup>2</sup>
+            1 hora - {selected} hasta 40m<sup>2</sup>
         </label>
     </div>
     <div className="flex items-center justify-between mb-4 pb-4 border-b border-gray-300">
         <label htmlFor="radio2" className="font-bold cursor-pointer">
             <input type="radio" id="radio2" name="timeOption" value="2" className="mr-2 cursor-pointer" onChange={handleRadioChange} />
-            2 hora - Deptos hasta 80m<sup>2</sup>
+            2 hora - {selected} hasta 80m<sup>2</sup>
         </label>
     </div>
     <div className="flex items-center justify-between">
         <label htmlFor="radio3" className="font-bold cursor-pointer">
             <input type="radio" id="radio3" name="timeOption" value="3" className="mr-2 cursor-pointer" onChange={handleRadioChange} />
-            3 hora - Deptos mas de 80m<sup>2</sup>
+            3 hora - {selected} mas de 80m<sup>2</sup>
         </label>
     </div>
 </div>
 
 <Link to={'/assistant'}>
-    <button className="bg-purpleHome text-white text-xl w-89 mx-6 p-4 rounded-lg flex items-center justify-center" onClick={handleSubmit}>Continuar</button>
+    <button className="bg-purpleHome text-white text-xl w-89 mx-6 mb-4 p-4 rounded-lg flex items-center justify-center" onClick={handleSubmit}>Continuar</button>
 </Link>
 
 
@@ -187,7 +201,7 @@ export default function ServicesPage() {
             <span>Home</span>
         </a>
     </Link>
-    <a href='' className='flex items-center flex-col text-purpleHome'>
+    <a href='' className='flex items-center flex-col'>
         <PiStarFourBold className='w-10 h-10' />
         <span>Solicitudes</span>
     </a>
