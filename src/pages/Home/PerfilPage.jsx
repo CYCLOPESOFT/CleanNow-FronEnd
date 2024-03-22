@@ -16,12 +16,12 @@ import image from '../../assets/images/image.jpg'
 export default function PerfilPage(){
     return(
     <div className="bg-grayHome h-full">
-        <div className='bg-purpleHome w-full h-96 rounded-b-xl absolute top-0 z-25'></div>
-        <div className="w-full flex h-36 justify-between items-center container mx-auto pt-3 px-8 relative z-10">
+        <div className='bg-purpleHome w-full h-1/3 rounded-b-xl absolute top-0 z-25'></div>
+        <div className="w-full flex h-24 justify-between items-center container mx-auto pt-12 px-6 relative z-10">
             <a href="">
                 <IoIosArrowBack className="text-white w-6 h-6"/>
             </a>
-            <span className="text-white text-xl font-md ml-2">Mi perfil</span>
+            <span className="text-white text-xl font-md ml-10">Mi perfil</span>
             <a href="">
                 <TbPencil className="inline-block text-white text-xl mr-1"/> 
                 <span className="text-white ">Editar</span>
@@ -33,7 +33,7 @@ export default function PerfilPage(){
                 <div className='rounded-full overflow-hidden'>
                     <img src={image} alt="camila" className='w-28 h-28 object-cover'/>
                 </div>
-                <span className="text-white font-bold text-lg mt-4">Adalberto Vargas</span>
+                <span className="text-white font-semibold text-lg mt-4">Adalberto Vargas</span>
                 <span className="text-white text-sm">correo@example.com</span>
             </div>
         </div>
