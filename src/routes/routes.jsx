@@ -14,6 +14,7 @@ import Service from "../pages/Home/ServicesPage";
 import PerfilPage from "../pages/Home/PerfilPage";
 import ProfileAssistant from "../pages/Home/ProfileAssistant";
 import Asistente from "../pages/Home/Assistant";
+import { ProtectedRoute } from "../components/App/Header/ProtectedRoute";
 const RoutesApp = () => {
   return (
     <Routes>
@@ -27,12 +28,15 @@ const RoutesApp = () => {
         <Route path="send-code" element={<SendVerification />} />
         <Route path="sendNumber" element={<VerificationNumber />} />
       </Route>
-      <Route path="home" element={<HomePage/>} />
-      <Route path="requests" element={<Solicitudes />} />
-      <Route path="service" element={<Service />} />
-      <Route path="profile" element={<PerfilPage />} />
-      <Route path="assistant" element={<Asistente />} />
-      <Route path="profileassistant" element={<ProfileAssistant />} />
+      <Route element={<ProtectedRoute />}>
+        <Route path="home" element={<HomePage/>} />
+        <Route path="requests" element={<Solicitudes />} />
+        <Route path="service" element={<Service />} />
+        <Route path="profile" element={<PerfilPage />} />
+        <Route path="assistant" element={<Asistente />} />
+        <Route path="profileassistant" element={<ProfileAssistant />} />
+      </Route>
+   
       
     </Routes>
   );
