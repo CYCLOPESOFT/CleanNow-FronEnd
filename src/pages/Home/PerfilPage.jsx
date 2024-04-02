@@ -14,6 +14,10 @@ import { Link } from "react-router-dom";
 import image from '../../assets/images/image.jpg'
 
 export default function PerfilPage(){
+
+    let userInfoString = localStorage.getItem("userInfo");
+    let userInfo = JSON.parse(userInfoString);
+
     return(
     <div className="bg-grayHome h-full">
         <div className='bg-purpleHome w-full h-1/3 rounded-b-xl absolute top-0 z-25'></div>
@@ -33,8 +37,8 @@ export default function PerfilPage(){
                 <div className='rounded-full overflow-hidden'>
                     <img src={image} alt="camila" className='w-28 h-28 object-cover'/>
                 </div>
-                <span className="text-white font-semibold text-lg mt-4">Adalberto Vargas</span>
-                <span className="text-white text-sm">correo@example.com</span>
+                <span className="text-white font-semibold text-lg mt-4">{userInfo.name}</span>
+                <span className="text-white text-sm">{userInfo.email}</span>
             </div>
         </div>
 

@@ -5,11 +5,10 @@ import Footer from '../../components/Home/Footer';
 import History from '../../components/Home/History';
 import Card from '../../components/Home/Card';
 import Form from '../../components/Home/Form';
-import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 
-export default function HomePage({selectedCard, setSelectedCard}){
+export default function HomePage(){
   let userInfoString = localStorage.getItem("userInfo");
   let userInfo = JSON.parse(userInfoString);
     return (
@@ -37,7 +36,7 @@ export default function HomePage({selectedCard, setSelectedCard}){
           </div>
         </div>
 
-        <Form setSelectedCard={setSelectedCard} selectedCard={selectedCard} />
+        <Form />
         <History />
 
         <span className="mx-8 font-medium">Recomendamos para ti</span>
