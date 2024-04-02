@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoLocationOutline, IoCameraOutline } from "react-icons/io5";
 import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
@@ -9,27 +9,38 @@ import { RiArrowRightSLine } from 'react-icons/ri';
 import { useSelector, useDispatch } from "react-redux";
 import { sendDomicileDetails } from '../../Slices/apiDomicileSlice';
 
+
 export default function ServicesPage() {
     const selected = useSelector((state)=>state.selected.request);
     const dispatch = useDispatch();
+    let userInfoString = localStorage.getItem("userInfo");
+    let userInfo = JSON.parse(userInfoString);
     const [formData, setFormData] = useState({
         addresses: '',
         apt: '',
         typeClean: '',
         time: '', // Agregar estado para almacenar el valor de tiempo seleccionado
-        imageDomicile: ''
+        imageDomicile: '',
+        userId: userInfo.id
     });
-        
-      
-    const [selectedFile, setSelectedFile] = useState(null);
+    const [redirect, setRedirect] = useState(false)   
 
     const handleFileChange = (event) => {
         const file = event.target.files[0];
-        setFormData({
-          ...formData,
-          imageDomicile: file.name // Asigna el nombre del archivo al estado imageDomicile
+        const data = new FormData()
+        data.append("image", file)
+        fetch("https://api.imgbb.com/1/upload?key=fad141938e0a0157245c990efed11b15", {
+            method: "POST",
+            body: data
+        }).then(response => response.json())
+        .then(data => {
+            setFormData({
+                ...formData,
+                imageDomicile: data.data.display_url
+        })
+        
+           // Asigna el nombre del archivo al estado imageDomicile
         });
-        setSelectedFile(file);
       };
       
     const handleChange = (e) => {
@@ -47,10 +58,33 @@ export default function ServicesPage() {
     };
     
 
-    const handleSubmit = (e) => {
-       
-        dispatch(sendDomicileDetails(formData));
+    const handleSubmit = () => {
+        // Validar los datos antes de enviarlos al servidor
+        if (!formData.addresses.trim()) {
+            alert("Por favor, ingresa una dirección.");
+            return;
+        }
+    
+        if (!formData.apt.trim()) {
+            alert("Por favor, ingresa un piso/departamento.");
+            return;
+        }
+    
+        if (!formData.typeClean.trim()) {
+            alert("Por favor, ingresa el tipo de limpieza.");
+            return;
+        }
+    
+        if (!formData.time) {
+            alert("Por favor, selecciona el tiempo de limpieza.");
+            return;
+        }   
+            setRedirect(true)
+            dispatch(sendDomicileDetails(formData))
+    
+        // Si todos los campos están completos, enviar los datos al servidor
     };
+    
 
     return (
         <div className="bg-grayHome h-full">
@@ -188,10 +222,16 @@ export default function ServicesPage() {
         </label>
     </div>
 </div>
-
-<Link to={'/assistant'}>
-    <button className="bg-purpleHome text-white text-xl w-89 mx-6 mb-4 p-4 rounded-lg flex items-center justify-center" onClick={handleSubmit}>Continuar</button>
-</Link>
+    {
+    redirect ? 
+    
+    <Link to={'/assistant'}>
+        <button className="bg-purpleHome text-white text-xl w-89 mx-6 mb-4 p-4 rounded-lg flex items-center justify-center" onClick={handleSubmit}>Continuar</button>
+    </Link>
+    :
+        <button className="bg-purpleHome text-white text-xl w-89 mx-6 mb-4 p-4 rounded-lg flex items-center justify-center" onClick={handleSubmit}>Continuar</button>
+    }
+    
 
 
 <footer className='h-28 sticky bottom-0 z-20 text-sm flex items-center justify-around bg-white py-8'>
