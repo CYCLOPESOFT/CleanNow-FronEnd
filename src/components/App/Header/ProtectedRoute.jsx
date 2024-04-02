@@ -1,6 +1,6 @@
 import { Navigate, Outlet } from "react-router-dom";
 
-export const ProtectedRoute = ({children})=> {
+export const ProtectedRoute = ()=> {
     let userInfoString = localStorage.getItem("userInfo");
     let userInfo = JSON.parse(userInfoString);
     if(!userInfo){

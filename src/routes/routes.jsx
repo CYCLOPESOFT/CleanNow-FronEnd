@@ -1,7 +1,5 @@
-import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Layout from "../pages/Layout";
-import About from "../pages/LandingPage/About";
 import Services from "../pages/LandingPage/Services";
 import Login from "../pages/Auth/Login";
 import RecoveryPassword from "../pages/Auth/RecoveryPassword";
