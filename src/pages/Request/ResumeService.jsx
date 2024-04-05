@@ -126,7 +126,7 @@ export default function ResumeService(){
                 <span>$2.800</span>
               </div>
 
-              <Link to={'/requests'}>
+              <Link to={'/paymentMethod'}>
                 <button className="bg-purpleHome hover:bg-purple-800 text-white font-semibold text-center px-16 py-3 rounded-lg">
                   Ir a pagar
                 </button>

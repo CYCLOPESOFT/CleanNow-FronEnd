@@ -19,6 +19,7 @@ export default {
         activeAppColor: "#6645b2",
         pinkSolicitudes: "#F2E5FF",
         lightGreen: "#01A890",
+        PaymentMethod: "#F2E5FF"
       },
     },
   },

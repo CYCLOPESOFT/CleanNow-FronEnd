@@ -12,6 +12,7 @@
   "dependencies": {
     "@react-google-maps/api": "^2.19.3",
     "@reduxjs/toolkit": "^2.2.1",
+    "chalk": "^5.3.0",
     "flowbite": "^2.3.0",
     "flowbite-react": "^0.7.2",
     "has-flag": "^5.0.1",

@@ -235,20 +235,18 @@ export default function ServicesPage() {
 
 
 <footer className='h-28 sticky bottom-0 z-20 text-sm flex items-center justify-around bg-white py-8'>
-    <Link to='/home'>
-        <a href='' className='flex items-center flex-col'>
+    <Link to='/home' className='flex items-center flex-col'>
             <RiHomeSmile2Line className='w-10 h-10' />
             <span>Home</span>
-        </a>
     </Link>
-    <a href='' className='flex items-center flex-col'>
+    <Link to={'/requests'} className='flex items-center flex-col'>
         <PiStarFourBold className='w-10 h-10' />
         <span>Solicitudes</span>
-    </a>
-    <a href='' className='flex items-center flex-col'>
+    </Link>
+    <Link to={'/chatList'} className='flex items-center flex-col'>
         <IoChatbubbleEllipsesOutline className='w-10 h-10' />
         <span>Chat</span>
-    </a>
+    </Link>
 </footer>
 </div>
 )
