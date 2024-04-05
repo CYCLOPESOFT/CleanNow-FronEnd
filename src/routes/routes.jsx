@@ -12,6 +12,7 @@ import Service from "../pages/Home/ServicesPage";
 import PerfilPage from "../pages/Home/PerfilPage";
 import ProfileAssistant from "../pages/Home/ProfileAssistant";
 import Asistente from "../pages/Home/Assistant";
+import ResumeService from "../pages/Request/ResumeService";
 import { ProtectedRoute } from "../components/App/Header/ProtectedRoute";
 const RoutesApp = () => {
   return (
@@ -33,6 +34,7 @@ const RoutesApp = () => {
         <Route path="profile" element={<PerfilPage />} />
         <Route path="assistant" element={<Asistente />} />
         <Route path="profileassistant" element={<ProfileAssistant />} />
+        <Route path="resumeService" element={<ResumeService />} />
       </Route>
    
       
