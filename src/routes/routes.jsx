@@ -14,7 +14,10 @@ import ProfileAssistant from "../pages/Home/ProfileAssistant";
 import Asistente from "../pages/Home/Assistant";
 import ResumeService from "../pages/Request/ResumeService";
 import PaymentMethod from "../pages/Request/PaymentMethod";
+import Chat from "../pages/Chat/Chat";
+import ChatList from "../pages/Chat/ListaChat";
 import { ProtectedRoute } from "../components/App/Header/ProtectedRoute";
+
 const RoutesApp = () => {
   return (
     <Routes>
@@ -32,6 +35,8 @@ const RoutesApp = () => {
         <Route path="home" element={<HomePage/>} />
         <Route path="requests" element={<Solicitudes />} />
         <Route path="service" element={<Service />} />
+        <Route path="chat" element={<Chat />} />
+        <Route path="chatList" element={<ChatList />} />
         <Route path="profile" element={<PerfilPage />} />
         <Route path="assistant" element={<Asistente />} />
         <Route path="profileassistant" element={<ProfileAssistant />} />

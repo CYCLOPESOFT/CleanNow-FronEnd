@@ -66,15 +66,15 @@ export default function Solicitudes(){
                     <RiHomeSmile2Line className='w-10 h-10'/>
                     <span>Home</span>
                 </Link>
-                <Link to='/service' className='flex items-center flex-col text-purpleHome'>
+                <Link to={'/requests'} className='flex items-center flex-col text-purpleHome'>
                     <PiStarFourBold  className='w-10 h-10'/>
                     <span>Solicitudes</span>
                 </Link>
                 
-                <a href='' className='flex items-center flex-col'>
+                <Link to={'/chatList'} className='flex items-center flex-col'>
                     <IoChatbubbleEllipsesOutline className='w-10 h-10'/>
                     <span>Chat</span>
-                </a>
+                </Link>
             </footer>
             
         </div>

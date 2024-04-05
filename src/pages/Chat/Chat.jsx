@@ -1,17 +1,17 @@
-import React from "react";
 import { IoIosArrowBack, IoMdCall } from "react-icons/io";
 import { GoPaperclip } from "react-icons/go";
 import { LuSendHorizonal } from "react-icons/lu";
 import image from '../../assets/images/image.jpg';
+import { Link } from "react-router-dom";
 
 export default function Chat() {
     return (
         <div className="bg-grayHome h-full">
             <div className='bg-purpleHome w-full h-32 rounded-b-xl absolute top-0 z-0'></div>
             <div className="w-full h-36 flex justify-between items-center container mx-auto pt-3 px-8 relative z-10" style={{ marginBottom: '1.5rem' }}>
-                <a href="">
+                <Link to={'/chatList'}>
                     <IoIosArrowBack className="text-white w-6 h-6" />
-                </a>
+                </Link>
                 <div className="flex items-center">
                     <img src={image} alt="camila" className='w-10 h-10 rounded-full mr-4' />
                     

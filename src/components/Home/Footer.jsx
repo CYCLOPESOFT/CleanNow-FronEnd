@@ -9,22 +9,22 @@ export default function Footer(){
          {/*footer de cleanNow*/}
          <footer className='h-28 sticky bottom-0 z-20 flex items-center justify-around bg-white py-8'>
                 
-                <a href='/home' className='flex items-center flex-col text-purpleHome'>
+                <Link to='/home' className='flex items-center flex-col text-purpleHome'>
                     <RiHomeSmile2Line className='w-10 h-10'/>
                     <span>Home</span>
-                </a>
-                
-                <Link to='/requests'>
-                <a className='flex items-center flex-col'>
-                    <PiStarFourBold  className='w-10 h-10'/>
-                    <span>Solicitudes</span>
-                </a>
                 </Link>
                 
-                <a href='' className='flex items-center flex-col'>
+                <Link to='/requests' className='flex items-center flex-col'>
+                
+                    <PiStarFourBold  className='w-10 h-10'/>
+                    <span>Solicitudes</span>
+                
+                </Link>
+                
+                <Link to={'/ChatList'} className='flex items-center flex-col'>
                     <IoChatbubbleEllipsesOutline className='w-10 h-10'/>
                     <span>Chat</span>
-                </a>
+                </Link>
             </footer>
         </>
     )

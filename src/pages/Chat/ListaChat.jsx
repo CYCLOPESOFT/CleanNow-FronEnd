@@ -7,20 +7,20 @@ import { Link } from "react-router-dom";
 import { RiArrowRightSLine } from 'react-icons/ri';
 import image from '../../assets/images/image.jpg'
 
-export default function PerfilPage() {
+export default function ChatList() {
     return (
         <div className="bg-grayHome h-full">
             <div className='bg-purpleHome w-full h-36 rounded-b-xl absolute top-0 z-25'></div>
             <div className="w-full flex flex-col justify-between items-center container mx-auto pt-10 px-8 relative z-10" style={{ marginBottom: '1.5rem' }}>
                 <div className="flex items-center justify-between w-full">
-                    <a href="">
+                    <Link to={'/home'}>
                         <IoIosArrowBack className="text-white w-6 h-6" />
-                    </a>
+                    </Link>
                     <span className="text-white text-xl font-md ml-2">Chat</span>
-                    <a href="">
+                    <Link>
                         <TbPencil className="inline-block text-white text-xl mr-1" /> 
                         <span className="text-white ">Editar</span>
-                    </a>
+                    </Link>
                 </div>
                 
                 <div className="w-full mt-4">                    
@@ -32,7 +32,7 @@ export default function PerfilPage() {
                 </div>
             </div>
 
-            <div className="w-full max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+            <div className="mb-72 w-full max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
       <div className="flex items-center justify-between mb-4">
       </div>
       <div className="flow-root">
@@ -53,7 +53,9 @@ export default function PerfilPage() {
                   10:22
                 </p>
               </div>
-              <RiArrowRightSLine className="w-6 h-6 absolute right-2 bottom-2 text-purpleHome" />
+              <Link to={'/chat'}>
+                  <RiArrowRightSLine className="w-6 h-6 absolute right-2 bottom-2 text-purpleHome" />
+              </Link>
             </div>
           </li>
           <li className="py-3 sm:py-4">
@@ -72,7 +74,9 @@ export default function PerfilPage() {
                   10:22
                 </p>
               </div>
-              <RiArrowRightSLine className="w-6 h-6 absolute right-2 bottom-2 text-purpleHome" />
+              <Link to={'/chat'}>
+                  <RiArrowRightSLine className="w-6 h-6 absolute right-2 bottom-2 text-purpleHome" />
+              </Link>
             </div>
           </li>
           <li className="py-3 sm:py-4">
@@ -91,7 +95,9 @@ export default function PerfilPage() {
                   10:22
                 </p>
               </div>
-              <RiArrowRightSLine className="w-6 h-6 absolute right-2 bottom-2 text-purpleHome" />
+              <Link to={'/chat'}>
+                  <RiArrowRightSLine className="w-6 h-6 absolute right-2 bottom-2 text-purpleHome" />
+              </Link>
             </div>
           </li>          
         </ul>
@@ -99,20 +105,18 @@ export default function PerfilPage() {
     </div>
 
             <footer className='h-28 sticky bottom-0 z-20 text-sm flex items-center justify-around bg-white py-8'>
-                <Link to='/'>
-                    <a href='' className='flex items-center flex-col'>
+                <Link to='/home' className='flex items-center flex-col'>  
                         <RiHomeSmile2Line className='w-10 h-10' />
                         <span>Home</span>
-                    </a>
                 </Link>
-                <a href='' className='flex items-center flex-col text-purpleHome'>
+                <Link to={'/requests'} className='flex items-center flex-col'>
                     <PiStarFourBold className='w-10 h-10' />
                     <span>Solicitudes</span>
-                </a>
-                <a href='' className='flex items-center flex-col'>
+                </Link>
+                <Link to={'/ChatList'} className='flex items-center flex-col text-purpleHome'>
                     <IoChatbubbleEllipsesOutline className='w-10 h-10' />
                     <span>Chat</span>
-                </a>
+                </Link>
             </footer>
         </div>
     )
