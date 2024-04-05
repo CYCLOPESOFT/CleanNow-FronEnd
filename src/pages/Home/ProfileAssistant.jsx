@@ -39,7 +39,7 @@ function ProfileAssistant() {
                   }}
                 >
                   <svg
-                    class="w-6 h-6 text-gray-800 dark:text-white"
+                    className="w-6 h-6 text-gray-800 dark:text-white"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -128,7 +128,7 @@ function ProfileAssistant() {
                 <span>8:00 AM</span>
               </div>
 
-              <Link to={'/requests'}>
+              <Link to={'/resumeService'}>
                 <button className="bg-purpleHome hover:bg-purple-800 text-white font-semibold text-center px-16 py-3 rounded-lg">
                   Contratar
                 </button>
