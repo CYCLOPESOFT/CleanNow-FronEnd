@@ -17,6 +17,11 @@ import PaymentMethod from "../pages/Request/PaymentMethod";
 import Chat from "../pages/Chat/Chat";
 import ChatList from "../pages/Chat/ListaChat";
 import { ProtectedRoute } from "../components/App/Header/ProtectedRoute";
+import DirectionList from "../components/ProfilePage/DirectionsList";
+import ProfileEdit from "../components/ProfilePage/ProfileEdit";
+import DirectionEdit from "../components/ProfilePage/DirectionEdit";
+import SecurityPage from "../components/ProfilePage/Security";
+import HelpPage from "../components/ProfilePage/HelpPage";
 
 const RoutesApp = () => {
   return (
@@ -32,19 +37,22 @@ const RoutesApp = () => {
         <Route path="sendNumber" element={<VerificationNumber />} />
       </Route>
       <Route element={<ProtectedRoute />}>
-        <Route path="home" element={<HomePage/>} />
+        <Route path="home" element={<HomePage />} />
         <Route path="requests" element={<Solicitudes />} />
         <Route path="service" element={<Service />} />
         <Route path="chat" element={<Chat />} />
         <Route path="chatList" element={<ChatList />} />
         <Route path="profile" element={<PerfilPage />} />
+        <Route path="editdirection" element={<DirectionEdit />} />
+        <Route path="directionlist" element={<DirectionList />} />
+        <Route path="editprofile" element={<ProfileEdit />} />
+        <Route path="securitypage" element={<SecurityPage />} />
+        <Route path="helppage" element={<HelpPage />} />
         <Route path="assistant" element={<Asistente />} />
         <Route path="profileassistant" element={<ProfileAssistant />} />
         <Route path="resumeService" element={<ResumeService />} />
         <Route path="paymentMethod" element={<PaymentMethod />} />
       </Route>
-   
-      
     </Routes>
   );
 };
