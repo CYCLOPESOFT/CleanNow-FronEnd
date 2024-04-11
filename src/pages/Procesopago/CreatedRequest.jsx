@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import { Button } from "flowbite-react"; 
+import { Link } from "react-router-dom";
 
-const CreatedRequest = () => {
+export default function CreatedRequest() {
   useEffect(() => {
     document.body.style.overflow = "hidden"; 
     return () => {
@@ -24,17 +25,19 @@ const CreatedRequest = () => {
         </p>
         <div className="justify-center mt-8 flex flex-wrap gap-2 ">
           <div style={{ marginBottom: "1px" }}>
+           <Link to={'/requests'}>
             <Button
-              className="bg-transparent border border-white px-5 mb-2"
-              color="gray outline"
-              onClick={() => {
-                // Ir a solicitudes
-              }}
-            >
-              Ir a solicitudes
-            </Button>
+                className="bg-transparent border border-white px-5 mb-2"
+                color="gray outline"
+                onClick={() => {
+                  // Ir a solicitudes
+                }}
+              >
+                Ir a solicitudes
+              </Button>
+           </Link>
           </div>
-          <div>
+          <Link to={'/home'}>
             <Button
               className="bg-transparent border border-white px-5"
               color="gray outline"
@@ -44,11 +47,9 @@ const CreatedRequest = () => {
             >
               Volver al inicio
             </Button>
-          </div>
+          </Link>
         </div>
       </div>
     </div>
   );
-};
-
-export default CreatedRequest;
+}

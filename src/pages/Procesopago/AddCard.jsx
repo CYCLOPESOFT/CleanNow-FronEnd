@@ -8,7 +8,7 @@ import { RiHomeSmile2Line } from "react-icons/ri";
 import { PiStarFourBold } from "react-icons/pi";
 import { Button, Label, TextInput } from "flowbite-react";
 
-export default function PaymentMethod() {
+export default function AddCard() {
     const [expiryDate, setExpiryDate] = useState(null);
     const [cardType, setCardType] = useState("visa"); 
 
@@ -26,7 +26,7 @@ export default function PaymentMethod() {
         <div className="min-h-screen bg-grayHome">
             <div className="bg-purpleHome w-full h-32 rounded-b-xl flex items-center justify-between px-8 mb-8">
                 <div>
-                    <Link to={"/resumeService"}>
+                    <Link to={"/paymentMethod"}>
                         <IoIosArrowBack className="text-white w-6 h-6" />
                     </Link>
                 </div>
@@ -99,9 +99,12 @@ export default function PaymentMethod() {
                         <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Guardar tarjeta</span>
                     </label>
                 </div>
-                <Button type="submit" className="bg-purpleHome hover:bg-purple-800 text-white font-semibold text-center px-16 py-3 rounded-lg mt-8 ml-auto mr-auto md:ml-auto md:mr-28 mb-7">
-                    Confirmar ($2.800)
-                </Button>
+                <Link to={'/paymentProcessing'}>
+                    <Button type="submit" className="bg-purpleHome hover:bg-purple-800 text-white font-semibold text-center px-16 py-3 rounded-lg mt-8 ml-auto mr-auto md:ml-auto md:mr-28 mb-7">
+                        Confirmar ($2.800)
+                    </Button>
+                </Link>
+
             </form>
 
             <footer className="h-28 sticky bottom-0 z-20 text-sm flex items-center justify-around bg-white py-8">
