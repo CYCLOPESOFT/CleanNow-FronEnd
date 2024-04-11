@@ -217,7 +217,7 @@ function Asistente() {
                     <PiStarFourBold className='w-10 h-10' />
                     <span>Solicitudes</span>
                 </Link>
-                <a href='' className='flex items-center flex-col'>
+                <a href={'/ChatList'} className='flex items-center flex-col'>
                     <IoChatbubbleEllipsesOutline className='w-10 h-10' />
                     <span>Chat</span>
                 </a>

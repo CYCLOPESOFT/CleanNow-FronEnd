@@ -1,12 +1,9 @@
-//import RoutesApp from "../routes/routes";
-//import PaymentProcessingScreen from "../components/Procesopago/PaymentProcessingScreen";
-//import CreatedRequest from "../components/Procesopago/CreatedRequest";
-import AddCard from "../components/Procesopago/AddCard";
+import RoutesApp from "../routes/routes";
+
 const App = () => {
   return (
     <div className="app">
-      <AddCard />
-      
+      <RoutesApp />
     </div>
   );
 };
