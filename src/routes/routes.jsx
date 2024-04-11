@@ -22,7 +22,9 @@ import ProfileEdit from "../components/ProfilePage/ProfileEdit";
 import DirectionEdit from "../components/ProfilePage/DirectionEdit";
 import SecurityPage from "../components/ProfilePage/Security";
 import HelpPage from "../components/ProfilePage/HelpPage";
-
+import { PaymentProcessingScreen} from "../components/Procesopago/PaymentProcessingScreen";
+import CreatedRequest from "../components/Procesopago/CreatedRequest";
+import AddCard from "../components/Procesopago/AddCard";
 const RoutesApp = () => {
   return (
     <Routes>
@@ -52,6 +54,9 @@ const RoutesApp = () => {
         <Route path="profileassistant" element={<ProfileAssistant />} />
         <Route path="resumeService" element={<ResumeService />} />
         <Route path="paymentMethod" element={<PaymentMethod />} />
+        <Route path="paymentProcessing" element={<PaymentProcessingScreen />} />
+        <Route path="createdRequest" element={<CreatedRequest />} />
+        <Route path="addCard" element={<AddCard />} />
       </Route>
     </Routes>
   );
