@@ -13,7 +13,7 @@ export default function ResumeService() {
       <div className="bg-purpleHome w-full h-32 rounded-b-xl absolute top-0 z-0"></div>
 
       <div className=" w-full h-36 flex justify-between items-center container mx-auto pt-3 px-6 relative z-10 mb-6">
-        <Link to={"/home"}>
+        <Link to={"/profileassistant"}>
           <IoIosArrowBack className="text-white w-6 h-6" />
         </Link>
         <span className="text-white text-xl font-md ml-8">

@@ -22,36 +22,46 @@ import ProfileEdit from "../components/ProfilePage/ProfileEdit";
 import DirectionEdit from "../components/ProfilePage/DirectionEdit";
 import SecurityPage from "../components/ProfilePage/Security";
 import HelpPage from "../components/ProfilePage/HelpPage";
+import AddCard from "../pages/Procesopago/AddCard";
+import CreatedRequest from "../pages/Procesopago/CreatedRequest";
+import PaymentProcessingScreen from "../pages/Procesopago/PaymentProcessingScreen";
+import ScrollToTop from "../components/App/Header/ScrollToTop";
 
 const RoutesApp = () => {
   return (
     <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Login />} />
-        <Route path="services" element={<Services />} />
-        <Route path="prices" element={<></>} />
-        <Route path="register" element={<UserData />} />
-        <Route path="contact" element={<VerificationNumber />} />
-        <Route path="recoverypassword" element={<RecoveryPassword />} />
-        <Route path="send-code" element={<SendVerification />} />
-        <Route path="sendNumber" element={<VerificationNumber />} />
-      </Route>
-      <Route element={<ProtectedRoute />}>
-        <Route path="home" element={<HomePage />} />
-        <Route path="requests" element={<Solicitudes />} />
-        <Route path="service" element={<Service />} />
-        <Route path="chat" element={<Chat />} />
-        <Route path="chatList" element={<ChatList />} />
-        <Route path="profile" element={<PerfilPage />} />
-        <Route path="editdirection" element={<DirectionEdit />} />
-        <Route path="directionlist" element={<DirectionList />} />
-        <Route path="editprofile" element={<ProfileEdit />} />
-        <Route path="securitypage" element={<SecurityPage />} />
-        <Route path="helppage" element={<HelpPage />} />
-        <Route path="assistant" element={<Asistente />} />
-        <Route path="profileassistant" element={<ProfileAssistant />} />
-        <Route path="resumeService" element={<ResumeService />} />
-        <Route path="paymentMethod" element={<PaymentMethod />} />
+      <Route element={<ScrollToTop />}> 
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Login />} />
+          <Route path="services" element={<Services />} />
+          <Route path="prices" element={<></>} />
+          <Route path="register" element={<UserData />} />
+          <Route path="contact" element={<VerificationNumber />} />
+          <Route path="recoverypassword" element={<RecoveryPassword />} />
+          <Route path="send-code" element={<SendVerification />} />
+          <Route path="sendNumber" element={<VerificationNumber />} />
+        </Route>
+        <Route element={<ProtectedRoute />}>
+          
+            <Route path="home" element={<HomePage />} />
+            <Route path="requests" element={<Solicitudes />} />
+            <Route path="service" element={<Service />} />
+            <Route path="chat" element={<Chat />} />
+            <Route path="chatList" element={<ChatList />} />
+            <Route path="profile" element={<PerfilPage />} />
+            <Route path="editdirection" element={<DirectionEdit />} />
+            <Route path="directionlist" element={<DirectionList />} />
+            <Route path="editprofile" element={<ProfileEdit />} />
+            <Route path="securitypage" element={<SecurityPage />} />
+            <Route path="helppage" element={<HelpPage />} />
+            <Route path="assistant" element={<Asistente />} />
+            <Route path="profileassistant" element={<ProfileAssistant />} />
+            <Route path="resumeService" element={<ResumeService />} />
+            <Route path="paymentMethod" element={<PaymentMethod />} />
+            <Route path="paymentProcessing" element={<PaymentProcessingScreen />} />
+            <Route path="createdRequest" element={<CreatedRequest />} />
+            <Route path="addCard" element={<AddCard />} />
+        </Route>
       </Route>
     </Routes>
   );

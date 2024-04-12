@@ -58,32 +58,42 @@ export default function ServicesPage() {
     };
     
 
+    const [formErrors, setFormErrors] = useState({
+        addresses: "",
+        apt: "",
+        typeClean: "",
+        time: ""
+    });
+    
     const handleSubmit = () => {
         // Validar los datos antes de enviarlos al servidor
+        const errors = {};
+    
         if (!formData.addresses.trim()) {
-            alert("Por favor, ingresa una dirección.");
-            return;
+            errors.addresses = "Por favor, ingresa una dirección.";
         }
     
         if (!formData.apt.trim()) {
-            alert("Por favor, ingresa un piso/departamento.");
-            return;
+            errors.apt = "Por favor, ingresa un piso/departamento.";
         }
     
         if (!formData.typeClean.trim()) {
-            alert("Por favor, ingresa el tipo de limpieza.");
-            return;
+            errors.typeClean = "Por favor, ingresa el tipo de limpieza.";
         }
     
         if (!formData.time) {
-            alert("Por favor, selecciona el tiempo de limpieza.");
-            return;
-        }   
-            setRedirect(true)
-            dispatch(sendDomicileDetails(formData))
+            errors.time = "Por favor, selecciona el tiempo de limpieza.";
+        }
     
-        // Si todos los campos están completos, enviar los datos al servidor
+        if (Object.keys(errors).length > 0) {
+            setFormErrors(errors);
+            return;
+        }
+    
+        setRedirect(true);
+        dispatch(sendDomicileDetails(formData));
     };
+    
     
 
     return (
@@ -110,14 +120,19 @@ export default function ServicesPage() {
                         <IoLocationOutline className="w-6 h-6 absolute left-0 top-4 text-purpleHome" />
                         {/*De este input tomaras el addresses */}
                         <input
-                            type="text"
-                            name="addresses"
-                            id="floating_direccion"
-                            className="block py-3 px-0 pl-10 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                            placeholder=" "
-                            required
-                            onChange={handleChange}
-                        />
+                        type="text"
+                        name="addresses"
+                        id="floating_direccion"
+                        className={`block py-3 px-0 pl-10 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer ${
+                            formErrors.addresses ? "border-red-500" : ""
+                        }`}
+                        placeholder=" "
+                        required
+                        onChange={handleChange}
+                    />
+                    {formErrors.addresses && (
+                        <p className="text-red-500 text-sm">{formErrors.addresses}</p>
+                    )}
                         <RiArrowRightSLine className="w-6 h-6 absolute right-2 top-4 text-purpleHome" />
                     </div>
 
@@ -132,15 +147,20 @@ export default function ServicesPage() {
                         {/*De este input tomaras el apt */}
                        
                         <input
-    type="text"
-    name="apt"
-    id="floating_piso/departamento"
-    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-    placeholder=" "
-    required
-    onChange={handleChange}
-/>
-</div>
+                        type="text"
+                        name="apt"
+                        id="floating_piso/departamento"
+                        className={`block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer ${
+                            formErrors.apt ? "border-red-500" : ""
+                        }`}
+                        placeholder=" "
+                        required
+                        onChange={handleChange}
+                    />
+                    {formErrors.apt && (
+                        <p className="text-red-500 text-sm">{formErrors.apt}</p>
+                    )}
+                    </div>
 
 {/* Timbre/Portero */}
 <div className="relative z-0 w-full mb-5 group">
@@ -172,10 +192,15 @@ export default function ServicesPage() {
     id="typeClean"
     name="typeClean"
     rows="8"
-    className="p-2.5 w-89 text-sm text-gray-900 bg-white mx-6 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" style={{ marginBottom: '1rem' }}
+    className={`p-2.5 w-89 text-sm text-gray-900 bg-white mx-6 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ${
+        formErrors.typeClean ? "border-red-500" : ""
+    }`}
     placeholder="Describe el tipo de limpieza que necesitan tus espacios para cumplir tus expectativas..."
     onChange={handleChange}
 ></textarea>
+{formErrors.typeClean && (
+    <p className="ml-6 mb-2 text-red-500 text-sm">{formErrors.typeClean}</p>
+)}
 
 <div className="border border-purpleHome w-89 mx-6 p-4 rounded-lg " style={{ marginBottom: '2rem' }}>
     <label htmlFor="fileInput" className="cursor-pointer flex items-center justify-center">

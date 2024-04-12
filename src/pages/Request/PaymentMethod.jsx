@@ -46,7 +46,7 @@ export default function PaymentMethod() {
                 <span className="text-lg">Añadir otro metodo de pago</span>
             </div>
 
-            <Link to={'/requests'}>
+            <Link to={'/addcard'}>
                 <button className="bg-purpleHome hover:bg-purple-800 text-white font-semibold text-center px-16 py-3 rounded-lg mt-8 ml-14 mb-72">
                   Elegir medio de pago
                 </button>
