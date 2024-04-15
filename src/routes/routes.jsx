@@ -26,6 +26,8 @@ import AddCard from "../pages/Procesopago/AddCard";
 import CreatedRequest from "../pages/Procesopago/CreatedRequest";
 import PaymentProcessingScreen from "../pages/Procesopago/PaymentProcessingScreen";
 import ScrollToTop from "../components/App/Header/ScrollToTop";
+import Opiniones from "../pages/Home/Opiniones"
+import Notificaciones from "../pages/Home/Notificaciones" 
 
 const RoutesApp = () => {
   return (
@@ -61,6 +63,8 @@ const RoutesApp = () => {
             <Route path="paymentProcessing" element={<PaymentProcessingScreen />} />
             <Route path="createdRequest" element={<CreatedRequest />} />
             <Route path="addCard" element={<AddCard />} />
+            <Route path="opinions" element={<Opiniones />} />
+            <Route path="notifications" element={<Notificaciones />} />
         </Route>
       </Route>
     </Routes>
