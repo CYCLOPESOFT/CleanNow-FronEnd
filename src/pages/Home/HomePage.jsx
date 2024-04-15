@@ -30,9 +30,9 @@ export default function HomePage(){
 
               </Link>
             </a>
-            <div className="flex items-center rounded-lg">
+            <Link to={'/notifications'} className="flex items-center rounded-lg">
               <HiOutlineBell className="bg-white rounded-lg w-8 h-8 p-1 text-purpleHome" />
-            </div>
+            </Link>
           </div>
         </div>
 

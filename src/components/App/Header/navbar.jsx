@@ -1,4 +1,3 @@
-import React from "react";
 import { Button, Navbar, Tooltip } from "flowbite-react";
 import { HiOutlineSun, HiOutlineMoon } from "react-icons/hi";
 import { useTheme } from "/src/config/theme/useTheme";
