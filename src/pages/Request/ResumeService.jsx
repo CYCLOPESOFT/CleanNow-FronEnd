@@ -6,7 +6,12 @@ import { CiCalendar } from "react-icons/ci";
 import { FaRegClock } from "react-icons/fa";
 import { GiVacuumCleaner } from "react-icons/gi";
 import { IoIosArrowBack } from "react-icons/io";
+import { useSelector } from "react-redux";
 export default function ResumeService() {
+    const { assistant, domicile,hour } = useSelector(
+      (state) => state.auth
+    );
+
   return (
     <div className="bg-grayHome h-full">
       {/* Header */}
@@ -40,7 +45,7 @@ export default function ResumeService() {
             <div className="flex flex-col">
               <span className=" text-gray-500 mb-2">Direccion</span>
               <span className="w-4/5">
-                Departamento . Piso 2 B Lima 12345 . Cordoba
+                {domicile.addresses}. {domicile.apt}. {domicile.timbre}
               </span>
             </div>
           </div>
@@ -53,7 +58,7 @@ export default function ResumeService() {
             <div className="flex flex-col">
               <span className="text-gray-500 mb-2">Asistente</span>
               <span className="w-4/5">
-                Paola Torres . 35 años Cordoba capital
+                {assistant.name}. {assistant.age} {assistant.location}
               </span>
             </div>
           </div>
@@ -74,7 +79,7 @@ export default function ResumeService() {
 
             <div className="flex flex-col">
               <span className="text-gray-500">Hora</span>
-              <span className="">8:00 AM</span>
+              <span className="">{hour}</span>
             </div>
           </div>
 
@@ -86,10 +91,7 @@ export default function ResumeService() {
             </div>
             <div className="flex flex-col">
               <span className=" text-gray-500 ">Descripcion</span>
-              <span className="w-full">
-                !Hola! Necesito una limpieza general de mi depto y ademas,
-                limpieza de vidrios y ventanas.
-              </span>
+              <span className="w-full">{domicile.typeClean}</span>
             </div>
           </div>
         </form>
@@ -110,19 +112,19 @@ export default function ResumeService() {
           <div className="flex flex-col border-b-2 border-b-solid border-gray-300 mb-3 pb-3 px-2 text-lg">
             <div className="flex justify-between mb-2">
               <span className="">Total</span>
-              <span>2 Horas</span>
+              <span>{domicile.time} Horas</span>
             </div>
 
             <div className="flex justify-between mb-2">
               <span>Tarifa/Hora</span>
-              <span>$1.400</span>
+              <span>${assistant.price}</span>
             </div>
           </div>
 
           <div>
             <div className="flex justify-between mb-2 font-bold px-2 text-lg">
               <span className="">Total</span>
-              <span>$2.800</span>
+              <span>${assistant.price * domicile.time}</span>
             </div>
           </div>
         </form>
@@ -133,7 +135,7 @@ export default function ResumeService() {
         <div className="flex justify-between w-full px-8">
           <div className="flex flex-col font-semibold text-lg">
             <span>Total</span>
-            <span>$2.800</span>
+            <span>${assistant.price * domicile.time}</span>
           </div>
 
           <Link to={"/paymentMethod"}>

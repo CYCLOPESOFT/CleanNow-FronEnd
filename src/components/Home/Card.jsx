@@ -1,8 +1,7 @@
 import { TiStarFullOutline } from "react-icons/ti";
 import { BsFillPatchCheckFill } from "react-icons/bs";
-import image from '../../assets/images/image.jpg'
 import { MdChevronRight } from "react-icons/md";
-export default function Card(){
+export default function Card({image, name}){
     return(
         <>
             {/*card*/}
@@ -14,7 +13,7 @@ export default function Card(){
                     </div>
 
                     <div className='flex flex-col gap-2 justify-center'>
-                        <span className='font-semibold'>Dan Tejada</span>
+                        <span className='font-semibold'>{name}</span>
                         <div>
                         <TiStarFullOutline className='inline-block text-yellow-200'/> 
                         <span>4.5</span>

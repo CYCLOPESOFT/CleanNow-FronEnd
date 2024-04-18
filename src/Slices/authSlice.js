@@ -14,6 +14,10 @@ const initialState = {
   register: false,
   authenticate: false,
   user: null,
+  assistantSelected:null,
+  assistant:"",
+  domicile:"",
+  hour:""
 };
 
 const authSlice = createSlice({
@@ -42,6 +46,18 @@ const authSlice = createSlice({
     },
     setAuth: (state, action) => {
       state.authenticate = true;
+    },
+    setDomicile: (state, action) => {
+      state.domicile = action.payload;
+    },
+    setAssistant: (state, action) => {
+      state.assistant = action.payload;
+    },
+    setAssistantSelected: (state, action) => {
+      state.assistantSelected = action.payload;
+    },
+    setHour:(state,action)=>{
+      state.hour = action.payload;
     },
     setSign: (state, action) => {
       if (state.code === action.payload.code) {
@@ -79,6 +95,10 @@ export const {
   setStateRegister,
   setAuth,
   setSign,
+  setAssistant,
+  setAssistantSelected,
+  setDomicile,
+  setHour
 } = authSlice.actions;
 
 export default authSlice.reducer;
