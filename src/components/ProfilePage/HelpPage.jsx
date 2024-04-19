@@ -6,7 +6,7 @@ const HelpPage = () => {
   return (
     <>
       {/* Header */}
-      <div className="bg-purple-600 w-full h-32 rounded-b-xl absolute top-0 z-0"></div>
+      <div className="bg-purpleHome w-full h-32 rounded-b-xl absolute top-0 z-0"></div>
       <div className="w-full h-24 flex items-center container mx-auto pt-9 px-6 relative z-10 mb-6">
         <Link to="/profile">
           <IoIosArrowBack className="text-white w-6 h-6" />

@@ -20,7 +20,7 @@ export default function Notificaciones() {
 
             <div className='bg-white h-min-height w-min-widht mt-2 rounded-xl mx-5 p-8' style={{ marginBottom: '1rem' }}>
                 <p className="mt-2"> {/* Texto debajo del nombre y la fecha */}
-                    Maria Laura es una genia en la limpieza. Mi casa nunca estuvo tan impecable. ¡La recomiendo a todos mis conocidos!
+                ¡Oferta especial para ti! Reserva tu próxima limpieza con un 15% de descuento. ¡No te lo pierdas, descarga la app ahora!
                 </p>
                 <div className="flex justify-end mt-2">
                     <RiMoreFill className="text-gray-500" />
@@ -29,7 +29,7 @@ export default function Notificaciones() {
 
             <div className='bg-white h-min-height w-min-widht mt-2 rounded-xl mx-5 p-8' style={{ marginBottom: '2rem' }}>
                 <p className="mt-2"> {/* Texto debajo del nombre y la fecha */}
-                    Maria Laura es una genia en la limpieza. Mi casa nunca estuvo tan impecable. ¡La recomiendo a todos mis conocidos!
+                ¡Atención a todos nuestros clientes amantes del orden y la limpieza! ¿Buscas una oferta irresistible para mantener tu hogar impecable? ¡Estás de suerte! Por tiempo limitado, estamos ofreciendo un 20% de descuento en tu próximo servicio de limpieza.
                 </p>
                 <div className="flex justify-end mt-2">
                     <RiMoreFill className="text-gray-500" />
@@ -40,7 +40,7 @@ export default function Notificaciones() {
 
             <div className='bg-white h-min-height w-min-widht mt-2 rounded-xl mx-5 p-8' style={{ marginBottom: '1rem' }}>
                 <p className="mt-2"> {/* Texto debajo del nombre y la fecha */}
-                    Maria Laura es una genia en la limpieza. Mi casa nunca estuvo tan impecable. ¡La recomiendo a todos mis conocidos!
+                ¡La profesional de la limpieza Maria Laura te ha calificado con 5 estrellas tu trato hacia ella!
                 </p>
                 <div className="flex justify-end mt-2">
                     <RiMoreFill className="text-gray-500" />

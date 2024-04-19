@@ -25,10 +25,10 @@ export default function PerfilPage() {
           <IoIosArrowBack className="text-white w-6 h-6" />
         </Link>
         <span className="text-white text-xl font-md ml-10">Mi perfil</span>
-        <a href="">
+        <Link to={'/editprofile'}>
           <TbPencil className="inline-block text-white text-xl mr-1" />
           <span className="text-white ">Editar</span>
-        </a>
+        </Link>
       </div>
 
       <div

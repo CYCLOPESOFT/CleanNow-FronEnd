@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setAssistant, setHour } from "../../Slices/authSlice";
 
 function ProfileAssistant() {
-  const hours = ["08:00 AM", "09:00 AM", "14:00 AM"];
+  const hours = ["08:00 AM", "09:00 AM", "14:00 PM"];
   const dispatch = useDispatch();
   const { assistantSelected, assistant,domicile,hour:selectHour } = useSelector((state) => state.auth);
 
@@ -93,7 +93,7 @@ function ProfileAssistant() {
         <div className="container mx-auto px-4 pt-8">
           <div className="mb-8 pb-4">
             <h2 className="border-b border-gray-500 border-solid pb-2 text-xl font-bold mb-4">
-              Sobre Mi {assistant.age} años
+              Sobre Mi
             </h2>
             <p className="mt-4">{assistant.aboutMe}</p>
           </div>
@@ -133,7 +133,7 @@ function ProfileAssistant() {
                   }`}
                   onClick={() => dispatch(setHour(hour))}
                 >
-                  <p>{selectHour}</p>
+                  <p>{hour}</p>
                 </Card>
               ))}
             </div>

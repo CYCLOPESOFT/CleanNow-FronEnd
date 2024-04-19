@@ -15,7 +15,7 @@ export default function DirectionList() {
         </span>
         <a href="">
           <FiPlus className="inline-block text-white text-xl mr-1" />
-          <span className="text-white ">Añadir</span>
+          <Link to={'/editdirection'} className="text-white ">Añadir</Link>
         </a>
       </div>
 
@@ -28,22 +28,22 @@ export default function DirectionList() {
       <div className="flex justify-center items-center flex-col  ">
         <Card className="max-w-sm mt-8 mb-8">
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            Bryan De Jesus Rosa Tavarez
+            Dan Luis Tejada Gonzalez
           </h5>
           <p className="font-normal text-gray-700 dark:text-gray-400">
-            SENDPACK SP-00029815
+            Casa Residencia Itla
           </p>
           <p className="font-normal text-gray-700 dark:text-gray-400">
-            13469 NW 19TH LN
+            Boca Chica
           </p>
           <p className="font-normal text-gray-700 dark:text-gray-400">
-            MIAMI, FL 33182
+            Autopista Las Americas, Itla Road
           </p>
           <p className="font-normal text-gray-700 dark:text-gray-400">
-            UNITED STATES
+            Republica Dominicana
           </p>
           <p className="font-normal text-gray-700 dark:text-gray-400">
-            Numero telefónico: 786-487-9600
+            Numero telefónico: 809-506-4767
           </p>
           <Link to={"/editdirection"}>
             <Button className="bg-appColor w-full">Editar</Button>
@@ -52,22 +52,22 @@ export default function DirectionList() {
         </Card>
         <Card className="max-w-sm mb-8">
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            Juan Addiel Leonardo Jaquez
+            Dan Luis Tejada Gonzalez
           </h5>
           <p className="font-normal text-gray-700 dark:text-gray-400">
-            BMCARGO BM-00724849
+            Casa #24
           </p>
           <p className="font-normal text-gray-700 dark:text-gray-400">
-            03452 NW 49TH EF
+            San francisco de Macoris
           </p>
           <p className="font-normal text-gray-700 dark:text-gray-400">
-            MIAMI, FL 90824
+            Urb.Almanzar, Calle D
           </p>
           <p className="font-normal text-gray-700 dark:text-gray-400">
-            UNITED STATES
+            Rpublica Dominicana
           </p>
           <p className="font-normal text-gray-700 dark:text-gray-400">
-            Numero telefónico: 786-892-9289
+            Numero telefónico: 829-923-0392
           </p>
           <Button className="bg-appColor">Editar</Button>
           <Button className="bg-appColor">Descartar</Button>

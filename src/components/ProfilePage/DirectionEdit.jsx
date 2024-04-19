@@ -8,7 +8,7 @@ export default function DirectionEdit() {
       {/* Header */}
       <div className="bg-purpleHome w-full h-32 rounded-b-xl absolute top-0 z-0"></div>
       <div className=" w-full h-24 flex  items-center container mx-auto pt-9 px-6 relative z-10 mb-6">
-        <Link to={"/profile"}>
+        <Link to={"/directionlist"}>
           <IoIosArrowBack className="text-white w-6 h-6" />
         </Link>
         <span className="text-white text-xl font-md ml-24">
@@ -28,13 +28,13 @@ export default function DirectionEdit() {
             <div className="mb-2 block">
               <Label
                 htmlFor="name1"
-                value="Nombre completo (nombre y apellido)"
+                value="Numero de casa/apartamento"
               />
             </div>
             <TextInput
               id="name1"
               type="text"
-              placeholder="juan Perez"
+              placeholder="Casa #12"
               required
             />
           </div>
@@ -49,7 +49,7 @@ export default function DirectionEdit() {
               required
             />
             <span className="text-xs">
-              Se puede utilizar para ayudar a la entrega
+              Se puede utilizar para ayudar a la comunicación
             </span>
           </div>
           <div>

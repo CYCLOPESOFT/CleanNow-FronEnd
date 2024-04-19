@@ -69,7 +69,7 @@ function Asistente() {
 
             <div className="flex gap-2">
               <p className="rounded-lg text-purpleHome border-2 border-solid border-purpleHome py-1 px-2">
-                Córdoba
+                STD
               </p>
               <p className="rounded-lg text-purpleHome border-2 border-solid border-purpleHome py-1 px-2">
                 Valoraciones
