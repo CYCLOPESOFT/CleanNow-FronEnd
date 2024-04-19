@@ -101,7 +101,7 @@ export default function AddCard() {
                 </div>
                 <Link to={'/paymentProcessing'}>
                     <Button type="submit" className="bg-purpleHome hover:bg-purple-800 text-white font-semibold text-center px-16 py-3 rounded-lg mt-8 ml-auto mr-auto md:ml-auto md:mr-28 mb-7">
-                        Confirmar ($2.800)
+                        Confirmar ($6000)
                     </Button>
                 </Link>
 

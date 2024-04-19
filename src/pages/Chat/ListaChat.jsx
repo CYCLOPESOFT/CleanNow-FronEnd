@@ -40,14 +40,35 @@ export default function ChatList() {
           <li className="py-3 sm:py-4">
             <div className="flex items-center relative">
               <div className="flex-shrink-0">
-                <img src={image} alt="camila" className='w-20 h-20 rounded-full' />
+                <img src={'https://i.imgur.com/93zVxR5.png'} alt="camila" className='w-20 h-20 rounded-full' />
               </div>
               <div className="flex-1 min-w-0 ms-4">
                 <p className="text-lg font-medium text-gray-900 truncate dark:text-white">
-                  Adalberto Vargas
+                  Roberto Garcia
                 </p>
                 <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                  Muchas Gracias, Saludo
+                  Buenas noches.
+                </p>
+                <p className="text-sm text-gray-500 truncate dark:text-gray-400 absolute right-2 top-2">
+                  18:00
+                </p>
+              </div>
+              <Link to={'/chat'}>
+                  <RiArrowRightSLine className="w-6 h-6 absolute right-2 bottom-2 text-purpleHome" />
+              </Link>
+            </div>
+          </li>
+          <li className="py-3 sm:py-4">
+            <div className="flex items-center relative">
+              <div className="flex-shrink-0">
+                <img src={'https://i.imgur.com/zEoAFj2.png'} alt="camila" className='w-20 h-20 rounded-full' />
+              </div>
+              <div className="flex-1 min-w-0 ms-4">
+                <p className="text-lg font-medium text-gray-900 truncate dark:text-white">
+                  Jose Paulino
+                </p>
+                <p className="text-sm text-gray-500 truncate dark:text-gray-400">
+                  No se olvide de calificarme!
                 </p>
                 <p className="text-sm text-gray-500 truncate dark:text-gray-400 absolute right-2 top-2">
                   10:22
@@ -61,35 +82,14 @@ export default function ChatList() {
           <li className="py-3 sm:py-4">
             <div className="flex items-center relative">
               <div className="flex-shrink-0">
-                <img src={image} alt="camila" className='w-20 h-20 rounded-full' />
+                <img src={'https://i.imgur.com/yk0yQY0.png'} alt="camila" className='w-20 h-20 rounded-full' />
               </div>
               <div className="flex-1 min-w-0 ms-4">
                 <p className="text-lg font-medium text-gray-900 truncate dark:text-white">
-                  Bryant Rosa
+                  Maria Sanchez
                 </p>
                 <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                  Lo que no hace Brian chiquito
-                </p>
-                <p className="text-sm text-gray-500 truncate dark:text-gray-400 absolute right-2 top-2">
-                  10:22
-                </p>
-              </div>
-              <Link to={'/chat'}>
-                  <RiArrowRightSLine className="w-6 h-6 absolute right-2 bottom-2 text-purpleHome" />
-              </Link>
-            </div>
-          </li>
-          <li className="py-3 sm:py-4">
-            <div className="flex items-center relative">
-              <div className="flex-shrink-0">
-                <img src={image} alt="camila" className='w-20 h-20 rounded-full' />
-              </div>
-              <div className="flex-1 min-w-0 ms-4">
-                <p className="text-lg font-medium text-gray-900 truncate dark:text-white">
-                  Juan Addiel
-                </p>
-                <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                  El loco e duro...
+                  Su casa quedo impecable
                 </p>
                 <p className="text-sm text-gray-500 truncate dark:text-gray-400 absolute right-2 top-2">
                   10:22

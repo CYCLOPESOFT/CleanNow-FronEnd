@@ -13,22 +13,22 @@ export default function Chat() {
                     <IoIosArrowBack className="text-white w-6 h-6" />
                 </Link>
                 <div className="flex items-center">
-                    <img src={image} alt="camila" className='w-10 h-10 rounded-full mr-4' />
+                    <img src={'https://i.imgur.com/93zVxR5.png'} alt="camila" className='w-10 h-10 rounded-full mr-4' />
                     
-                    <span className="text-white text-xl">Adalberto Vargas</span>
+                    <span className="text-white text-xl">Roberto Garcia</span>
                 </div>
                 <IoMdCall className="text-white w-8 h-8" />
             </div>
 
             <div className="flex items-start gap-2.5 pl-8">
-                <img src={image} alt="camila" className='w-8 h-8 rounded-full  ' />
+                <img src={'https://i.imgur.com/93zVxR5.png'} alt="camila" className='w-8 h-8 rounded-full  ' />
                 
                 <div className="flex flex-col w-full max-w-[320px] leading-1.5 p-4 bg-white rounded-e-xl rounded-es-xl dark:bg-gray-700" style={{ marginBottom: '1rem' }}>
                     <div className="flex items-center space-x-2 rtl:space-x-reverse">
-                        <span className="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
-                        <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+                        <span className="text-sm font-semibold text-gray-900 dark:text-white">Roberto Garcia</span>
+                        <span className="text-sm font-normal text-gray-500 dark:text-gray-400">18:10</span>
                     </div>
-                    <p className="text-sm font-normal py-2.5 text-gray-900 dark:text-white">Estoy interesado en limpiar mi oficina, esta usted disponible para limpiar mi oficina el dia de hoy a las 3:00PM?.</p>
+                    <p className="text-sm font-normal py-2.5 text-gray-900 dark:text-white">Buenas Dias, estoy disponible. Puede compartirme mas informacion ?</p>
                     
                 </div>                
             </div>
@@ -41,7 +41,7 @@ export default function Chat() {
             <span className="text-sm font-semibold text-gray-900 dark:text-white">Adalberto Vargas</span>
             <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:47</span>
         </div>
-        <p className="text-sm font-normal py-2.5 text-gray-900 dark:text-white">Buenas Dias, claro que estoy disponible. Puede compartirme mas informacion?</p>
+        <p className="text-sm font-normal py-2.5 text-gray-900 dark:text-white">Si, en un momento le envio fotos del lugar para que tenga lo necesario para la limpieza.</p>
     </div>
 </div>
 

@@ -70,7 +70,7 @@ export default function ResumeService() {
             </div>
             <div className="flex flex-col">
               <span className="text-gray-500">Fecha</span>
-              <span className="mr-6">Jue 10/08/2024</span>
+              <span className="mr-6">Thu 25/04/2024</span>
             </div>
 
             <div className="mr-4">

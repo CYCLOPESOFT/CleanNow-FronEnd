@@ -37,12 +37,12 @@ export default function Solicitudes(){
                 </div>
                     <hr/>
                 <div className="p-4">
-                <IoLocationOutline className="w-6 h-6 inline-block text-purpleHome"/> <span>Lima 123, Córdoba</span>
+                <IoLocationOutline className="w-6 h-6 inline-block text-purpleHome"/> <span>Autopista Las Americas, Itla Road</span>
                 </div>
                     <hr/>
                 <div className="p-4 flex justify-between">
                     <div>
-                         <span><CiCalendar className="w-6 h-6 text-purpleHome inline-block"/> 17/08/2023</span>
+                         <span><CiCalendar className="w-6 h-6 text-purpleHome inline-block"/> 25/04/2024</span>
                     </div>
 
                     <div>
@@ -51,11 +51,11 @@ export default function Solicitudes(){
                 </div>
                     <hr/>
                 <div className="p-4">
-                <LuUser2 className="w-6 h-6 inline-block text-purpleHome mr-1"/> <span>Paola Torres</span>
+                <LuUser2 className="w-6 h-6 inline-block text-purpleHome mr-1"/> <span>Roberto Garcia</span>
                 </div>
                     <hr/>
                 <div className="p-4 flex justify-between">
-                    <button className="py-2 px-6 rounded-lg text-purpleHome bg-pinkSolicitudes"> <IoChatbubbleEllipsesOutline className="inline-block w-8 h-8 mr-1"/> <span className="font-semibold text-xl">Ir al chat</span></button>
+                    <button className="py-2 px-6 rounded-lg text-purpleHome bg-pinkSolicitudes"> <IoChatbubbleEllipsesOutline className="inline-block w-8 h-8 mr-1"/> <Link to={'/chatList'} className="cursor-pointer font-semibold text-xl">Ir al chat</Link></button>
                     <button className="text-red-500 text-xl">Cancelar</button>
                 </div>
             </div>
